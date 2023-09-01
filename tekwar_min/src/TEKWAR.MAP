@@ -1,0 +1,3260 @@
+WATCOM Linker Version 10.5
+Copyright by WATCOM International Corp. 1985, 1995. All rights reserved.
+Created on:       22/02/17 00:55:45
+Executable Image: ..\run\tekwar.exe
+creating a DOS/4G executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0004:00000000        00234bc0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0001:00000000   00000010
+_TEXT                  CODE                          0001:00000010   0005a123
+CODE                   CODE                          0001:0005a133   00000d21
+_UNSTEXT               CODE                          0001:0005ae60   00003880
+_RFILETEXT             CODE                          0001:0005e6e0   00000190
+_TEXT16                CODE                          0002:00000000   00000134
+teksnd11_DATA          FAR_DATA                      0003:00000000   00000004
+_NULL                  BEGDATA        DGROUP         0004:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0004:00000004   00000000
+CONST                  DATA           DGROUP         0004:00000004   000027fc
+CONST2                 DATA           DGROUP         0004:00002800   0000010c
+_DATA                  DATA           DGROUP         0004:00002910   0000a4d9
+TIB                    DATA           DGROUP         0004:0000cde9   00000000
+TI                     DATA           DGROUP         0004:0000cde9   00000000
+TIE                    DATA           DGROUP         0004:0000cde9   00000000
+XIB                    DATA           DGROUP         0004:0000cdea   00000000
+XI                     DATA           DGROUP         0004:0000cdea   0000001e
+XIE                    DATA           DGROUP         0004:0000ce08   00000000
+YIB                    DATA           DGROUP         0004:0000ce08   00000000
+YI                     DATA           DGROUP         0004:0000ce08   00000006
+YIE                    DATA           DGROUP         0004:0000ce0e   00000000
+DATA                   DATA           DGROUP         0004:0000ce0e   00000000
+_BSS                   BSS            DGROUP         0004:0000ce10   00226da8
+STACK                  STACK          DGROUP         0004:00233bc0   00001000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: tekgame.obj(C:\TEKSRC2\SRC\tekgame.c)
+0004:0000ce10  _animateacc
+0004:0000d610  _animateptr
+0004:0000de10  _animatevel
+0004:0000e610  _animategoal
+0004:0000ee10  _netnames
+0004:0000eec0  _waterfountainwall
+0004:0000eee0  _revolvepivoty
+0004:0000eef0  _revolvepivotx
+0004:0000ef00  _subwayvel
+0004:0000ef10  _subwaytrackx2
+0004:0000ef20  _subwaytrackx1
+0004:0000ef30  _subwaytracksector
+0004:0000f330  _subwaytracky2
+0004:0000f340  _subwaygoalstop
+0004:0000f350  _subwaytracky1
+0004:0000f360  _subwaystopcnt
+0004:0000f370  _subwaystop
+0004:0000f3f0  _revolvey
+0004:0000f4f0  _revolvex
+0004:0000f5f0  _subwaynumsectors
+0004:0000f5f8  _subwayx
+0004:0000f608  _waterfountaincnt
+0004:0000f628  _slimesoundcnt
+0004:0000f648  _subwaypausetime
+0004:0000f658  _revolvesector
+0004:0000f660  _swingangopen
+0004:0000f6a0  _dragxdir
+0004:0000f6c0  _dragydir
+0004:0000f6e0  _swinganginc
+0004:0000f720  _swingwall
+0004:0000f860  _swingsector
+0004:0000f8a0  _swingangclosed
+0004:0000f8e0  _dragfloorz
+0004:0000f920  _swingang
+0004:0000f960  _dragx2
+0004:0000f9a0  _dragx1
+0004:0000f9e0  _dragy2
+0004:0000fa20  _dragy1
+0004:0000fa60  _swingangopendir
+0004:0000faa0  _swingx
+0004:0000fea0  _swingy
+0004:000102a0  _revolveang
+0004:000102a8  _floorpanninglist
+0004:00010328  _dragsectorlist
+0004:00010348  _xpanningsectorlist
+0004:00010368  _warpsectorlist
+0004:000103e8  _ypanningwalllist
+0004:00010468  _rotatespritelist
+0004:00010488* _othersyncval
+0004:00010688  _tempbuf
+0004:00010cc8* _syncval
+0004:00010ec8+ _recsyncsvel
+0004:00020ec8+ _recsyncvel
+0004:00028ec8+ _playerreadyflag
+0004:00028ed8+ _recsyncbits
+0004:00038ed8  _boardfilename
+0004:00038f28+ _recsyncangvel
+0004:00048f28+ _baksyncsvel
+0004:0004af28  _osyncbits
+0004:0004af48+ _baksyncbits
+0004:0004cf48  _fsyncangvel
+0004:0004cf68+ _baksyncangvel
+0004:0004ef68  _oang
+0004:0004ef88  _fsyncbits
+0004:0004efa8  _syncbits
+0004:0004efc8  _osprite
+0004:00051fc8  _ohoriz
+0004:00052008  _osyncangvel
+0004:00052028  _oposz
+0004:00052068  _oposx
+0004:000520a8  _oposy
+0004:000520e8  _syncangvel
+0004:00052108  _ozoom
+0004:00052148+ _baksyncvel
+0004:00053148  _fsyncsvel
+0004:00053168  _syncsvel
+0004:00053188  _syncvel
+0004:00053198  _osyncvel
+0004:000531a8  _fsyncvel
+0004:000531b8  _osyncsvel
+0004:000531d8  _ocursectnum
+0004:000531f8  _cursectnum
+0004:00053218  _score
+0004:00053258  _posz
+0004:00053298  _posy
+0004:000532d8  _revolvedoorang
+0004:000532f8  _revolvedoorrotang
+0004:00053318  _zoom
+0004:00053358  _dimensionmode
+0004:00053368  _playersprite
+0004:00053388  _hvel
+0004:000533c8  _saywatchit
+0004:00053408  _horiz
+0004:00053448  _numbombs
+0004:00053468  _revolvedoorx
+0004:000534a8  _revolvedoory
+0004:000534e8  _oflags
+0004:00053508  _ang
+0004:00053528  _revolvedoorstat
+0004:00053538  _lastchaingun
+0004:00053578  _deaths
+0004:00053598  _health
+0004:000535d8* _gundmost
+0004:00053718  _posx
+0004:00053758* _lavaradcnt
+0004:000537d8* _lavaradx
+0004:000577d8* _lavarady
+0004:0005b7d8+ _frame2draw
+0004:0005b7e8* _lavadropy
+0004:0005b868* _lavadropx
+0004:0005b8e8* _lavainc
+0004:0005b968* _lavadropsiz
+0004:0005b9e8+ _frameskipcnt
+0004:0005ba28* _lavadropsizlookup
+0004:0005baa8  _keyfifo
+0004:0005bae8  _keystatus
+0004:0005bbe8+ _sbpacket
+0004:0005bc78+ _dbgfname
+0004:0005bc88+ _getmessagetimeoff
+0004:0005bc8c  _neartaghitdist
+0004:0005bc90  _globhiz
+0004:0005bc94  _globhihit
+0004:0005bc98  _neartagdist
+0004:0005bc9c  _globlohit
+0004:0005bca0  _globloz
+0004:0005bca4  _masterslavetexttime
+0004:0005bca8  _lockclock
+0004:0005bcac+ _othersyncvalend
+0004:0005bcb0+ _syncvalcnt
+0004:0005bcb4+ _othersyncvalplc
+0004:0005bcb8+ _othersyncvalcnt
+0004:0005bcbc+ _syncvalend
+0004:0005bcc0+ _syncvalplc
+0004:0005bcc4+ _reccnt
+0004:0005bcc8  _smoothratio
+0004:0005bccc+ _movefifoend
+0004:0005bcd0+ _movefifoplc
+0004:0005bcd4  _locselectedgun2
+0004:0005bcd8  _locselectedgun
+0004:0005bcdc* _lavabakpic
+0004:0005fee0* _lavanumdrops
+0004:0005fee4* _lavanumframes
+0004:0005fee8+ _svel2
+0004:0005feec  _svel
+0004:0005fef0  _vel
+0004:0005fef4+ _vel2
+0004:0005fef8  _angvel
+0004:0005fefc+ _angvel2
+0004:0005ff00  _joyy
+0004:0005ff04  _joyx
+0004:0005ff08+ _dbgfilen
+0004:0005ff0c  _dbgflag
+0004:0005ff10  _dbgcolumn
+0004:0005ff14+ _jhighx
+0004:0005ff18+ _jhighy
+0004:0005ff1c+ _jlowx
+0004:0005ff20+ _jlowy
+0004:0005ff24* _joyycenter
+0004:0005ff28* _joyxcenter
+0004:0005ff2c  _dbgfp
+0004:0005ff30+ _getmessage
+0004:0005ffd2+ _typemessage
+0004:00060074+ _oldkeyhandler
+0004:0006007a  _subwaytrackcnt
+0004:0006007c  _floorpanningcnt
+0004:0006007e  _dragsectorcnt
+0004:00060080  _ypanningwallcnt
+0004:00060082  _swingcnt
+0004:00060084  _revolvecnt
+0004:00060086  _neartagsector
+0004:00060088  _neartagsprite
+0004:0006008a  _xpanningsectorcnt
+0004:0006008c  _rotatespritecnt
+0004:0006008e  _neartagwall
+0004:00060090  _warpsectorcnt
+0004:00060092  _screensize
+0004:00060094  _locsvel2
+0004:00060096  _locangvel
+0004:00060098  _olocangvel2
+0004:0006009a  _locbits2
+0004:0006009c  _olocbits
+0004:0006009e  _olocsvel2
+0004:000600a0  _locbits
+0004:000600a2  _locangvel2
+0004:000600a4  _olocangvel
+0004:000600a6  _olocsvel
+0004:000600a8  _locsvel
+0004:000600aa  _olocbits2
+0004:000600ac+ _spaceballinitflag
+0004:000600ae+ _vrpitch
+0004:000600b0* _lastmousy
+0004:000600b2+ _pitch
+0004:000600b4+ _roll
+0004:000600b6+ _yaw
+0004:000600b8+ _vrangle
+0004:000600ba  _localname
+0004:000600c5  _getmessageleng
+0004:000600c6  _locvel2
+0004:000600c7  _locvel
+0004:000600c8  _olocvel2
+0004:000600c9  _olocvel
+0004:000600ca+ _readch
+0004:000600cb  _keyfifoend
+0004:000600cc+ _extended
+0004:00002910* _mousebias
+0004:00002912  _biasthreshhold
+0004:00002914  _biasthreshholdon
+0004:00002915* _joycenteringon
+0004:00002916  _jcalibration
+0004:00002917  _jstickenabled
+0004:00002918  _jctrx
+0004:0000291c  _jctry
+0004:00002920  _spaceballon
+0004:00002921* _recording
+0004:00002925  _chainxres
+0004:00002935  _chainyres
+0004:00002961  _vesares
+0004:00002999  _option
+0004:000029a1  _keys
+0004:000029c1  _moreoptions
+0004:000029d6  _toggles
+0004:000029e6  _gamestuff
+0004:00002a26  _frameinterpolate
+0004:00002a27  _detailmode
+0004:00002a28  _ready2send
+0004:00002a29  _ototalclock
+0004:00002a2d  _gotlastpacketclock
+0004:00002a31* _syncstat
+0004:00002a33+ _recstat
+0004:00002a37  _screenpeek
+0004:00002a39  _oldmousebstatus
+0004:00002a3b  _brightness
+0004:00002a3d+ _screensizeflag
+0004:00002a3f  _typemessageleng
+0004:00002a40  _typemode
+0004:00002a41  _scantoasc
+0004:00002ac1  _scantoascwithshift
+0004:00002b41  _animatecnt
+0001:00000010+ debugout_
+0001:00000121  main_
+0001:00000719+ processinput_
+0001:000019c4  drawscreen_
+0001:000027f9+ movethings_
+0001:000028a8+ domovethings_
+0001:00002b9f+ adjustbiasthreshhold_
+0001:00002bd5+ getinput_
+0001:00003f54+ playback_
+0001:00004187+ doanimations_
+0001:00004263* getanimationgoal_
+0001:00004282  setanimation_
+0001:000042f0+ checkmasterslaveswitch_
+0001:0000445d+ initkeys_
+0001:000044b7  uninitkeys_
+0001:000044dd+ keyhandler_
+0001:0000462b  faketimerhandler_
+0001:00004b86+ getpackets_
+0001:00004ede* waitforeverybody_
+0004:00002b45+ _moreoptionbits
+0004:000600cd+ _oldreadch
+0004:000600ce  _keyfifoplc
+0004:000600cf+ _keytemp
+0004:000600d0  _joyb
+0004:000600d1+ _keyedhorizon
+0004:000600d2+ _oldjoyb
+Module: tekprep.obj(C:\TEKSRC2\SRC\tekprep.c)
+0004:000600d8+ _startspot
+0004:000601b8  _subwaysound
+0004:000601c8  _sprXTptr
+0004:000641c8  _sectptr
+0004:000651c8  _spriteXT
+0004:000871c8  _wallptr
+0004:0008f1c8  _sprptr
+0004:000931c8  _coopmode
+0004:000931cc  _switchlevelsflag
+0004:000931d0+ _bps
+0004:000931d4+ _startspotcnt
+0004:000931d8  _starta
+0004:000931dc  _startz
+0001:0000502b  prepareboard_
+0001:000062ad* findrandomspot_
+0001:00006432  netstartspot_
+0001:00006476  placerandompic_
+0001:000066d4  tekrestoreplayer_
+0001:000067c9  initplayersprite_
+0001:00006913+ initptrlists_
+0001:0000698b  tekpreinit_
+0001:00006c47+ mdmreadsettings_
+0001:00006d33  tekinitmultiplayers_
+0001:00006dd4  teknetpickmap_
+0001:000070b3  tekloadsetup_
+0001:000071ca  teksavesetup_
+0001:00007230  tekview_
+0004:00002b80+ _firsttimethru
+0004:00002b84+ _setopts
+0004:00002b8c+ _mappic
+0004:000931e0  _startx
+0004:000931e4  _starty
+0004:000931e8  _starts
+0004:000931ec+ _comp
+Module: tektag.obj(C:\TEKSRC2\SRC\tektag.c)
+0004:000931f0+ _animpicptr
+0004:00093270+ _mapsndfxptr
+0004:000932f0+ _doorxref
+0004:000942f0+ _fdxref
+0004:000952f0+ _delayfuncptr
+0004:00095370+ _sectvehptr
+0004:00095398+ _mapsndfx
+0004:000956d8+ _delayfunc
+0004:00095818+ _elevator
+0004:00097818+ _evptrlist
+0004:00098818+ _animpic
+0004:00098998+ _septrlist
+0004:00099998+ _doortype
+0004:0009e7b8+ _sectoreffect
+0004:000acfb8  _onelev
+0004:000acfc8+ _doorptr
+0004:000ad2e8+ _sexref
+0004:000ae2e8+ _numanimates
+0004:000ae2ec+ _sectorvehicle
+0004:000b4750+ _ambupdateclock
+0004:000b4754+ _numvehicles
+0004:000b4758+ _numdoors
+0004:000b475c+ _spriteelev
+0004:000b63e0+ _sprelevptr
+0001:00007246  operatesector_
+0001:00007794  tagcode_
+0001:00008612+ testneighborsectors_
+0001:000086a6  tekpreptags_
+0001:0000993e+ tekoperatesector_
+0001:00009a1e+ warp_
+0001:00009b42+ tekwarp_
+0001:00009bef+ warpsprite_
+0001:00009c4c  teknewsector_
+0001:00009e80+ tektagcode_
+0001:0000a45c+ stepdoor_
+0001:0000a497+ showwall2d_
+0001:0000a4c1+ showsect2d_
+0001:0000a544+ showsect2dtoggle_
+0001:0000a599* sectorblocked_
+0001:0000a61a+ movedoors_
+0001:0000b47e+ movesprelevs_
+0001:0000b676+ movefloordoor_
+0001:0000b8d2+ clearvehiclesoundindexes_
+0001:0000b8ee+ movevehicles_
+0001:0000c1d0  teksetdelayfunc_
+0001:0000c29b+ tekdodelayfuncs_
+0001:0000c321  setanimpic_
+0001:0000c396+ tekdoanimpic_
+0001:0000c476+ checkmapsndfx_
+0001:0000c6cf  tektagsave_
+0001:0000c8df  tektagload_
+0001:0000cb2d  tekheadbob_
+0001:0000cb6b  tekswitchtrigger_
+0001:0000cda0  krand_intercept_
+0004:00002b9c  _headbobon
+0004:00002ba0+ _bobstep
+0004:00002ba4  _flags32
+0004:00002c24+ _totalmapsndfx
+0004:00002c28+ _subwaystopdir
+0004:00002c38  _loopinsound
+0004:00002c3c  _baydoorloop
+0004:00002c40  _ambsubloop
+0004:000b6444+ _floordoorptr
+0004:000b64a8+ _numfloordoors
+0004:000b64ac+ _floordoor
+0004:000b6768+ _sprelevcnt
+0004:000b676c  _headbob
+0004:000b6770+ _secnt
+0004:000b6774+ _numdelayfuncs
+Module: teksnd.obj(C:\TEKSRC2\SRC\teksnd.c)
+0004:000b6778+ _songdatastatic
+0004:000b6788+ _songlist
+0004:000ba788+ _midicap
+0004:000ba7c8+ _thirdsongdata
+0004:000c5430+ _song
+0004:000c5478+ _basesongdata
+0004:000d00e0+ _secondsongdata
+0004:000dad48+ _dsoundptr
+0004:000dad88+ _sbuf
+0004:000dbdc8+ _loopbufptr
+0004:000dbdd0+ _digihardware
+0004:000dbde0+ _lsoundptr
+0004:000dbde8+ _sbufptr
+0004:000dc128+ _sample
+0004:000dc868+ _lsound
+0004:000dc898+ _sampleptr
+0004:000dc8f8+ _dsound
+0004:000dca78+ _loopbuf
+0004:000dcaa0+ _SampleSize
+0004:000dcaa4+ _SeekIndex
+0004:000dcaa8+ _fhmididriver
+0004:000dcaac+ _fhmididigidriver
+0004:000dcab0+ _midihardware
+0004:000dcabc+ _midiinitdriver
+0004:000dcae0+ _digiport
+0004:000dcae4+ _fhsounds
+0004:000dcae8+ _fhdigidriver
+0004:000dcaec+ _mididigiinitdriver
+0004:000dcb10+ _fhdigifill
+0004:000dcb14+ _songptr
+0004:000dcb20+ _fhsongs
+0004:000dcb24+ _totalsongsperlevel
+0004:000dcb28+ _LoopList
+0004:000dcb2c+ _loopsampleptr
+0004:000dcb38+ _digicap
+0004:00002c44+ _soundmode
+0004:00002c45  _musicmode
+0004:00002c46+ _digicapptr
+0004:00002c4c+ _digihardwareptr
+0004:00002c52+ _digiinitdriver
+0004:00002c9e+ _digiinitdriverptr
+0004:00002ca4+ _loopsampledata
+0004:00002d8c+ _LoopIndex
+0004:00002d90+ _looptoggle
+0004:00002d94* _loopmusepauseflag
+0004:00002d98+ _hLoopFile
+0004:00002d9c+ _LoopPending
+0004:00002da0* _digiportptr
+0004:00002da6+ _fhdigifillptr
+0004:00002dac+ _fhdigidriverptr
+0004:00002db2+ _midicapptr
+0004:00002db8+ _mididigiinitdriverptr
+0004:00002dbe+ _midiinitdriverptr
+0004:00002dc4+ _songdataptr
+0004:00002dca+ _midihardwareptr
+0004:00002dd0+ _fhmididriverptr
+0004:00002dd6+ _fhmididigidriverptr
+0004:00002ddc+ _songtrackmap
+0004:00002e5c+ _trackmapptr
+0004:00002e62+ _PanArray
+0004:00002ef2* _quarterseconds
+0004:00002ef6  _seconds
+0004:00002efa  _minutes
+0004:00002efe  _hours
+0004:00002f02  _messageon
+0004:00002f06  _digiloopflag
+0001:0000ce08  inittimer_
+0001:0000ce43  uninittimer_
+0001:0000ce62+ timerhandler_
+0001:0000ce7c+ initaudioptrs_
+0001:0000d1ae+ setupdigi_
+0001:0000d422+ setupmidi_
+0001:0000d7a4  initsb_
+0001:0000dc00+ _soundcallback
+0001:0000dc86+ _digiloopcallback
+0001:0000dca3* _triggercallback
+0001:0000dca3* _songcallback
+0001:0000dca4  playsound_
+0001:0000e0ac  stopsound_
+0001:0000e168  updatesounds_
+0001:0000e25f  updatevehiclesnds_
+0001:0000e399* stopsong_
+0001:0000e3cf+ removesong_
+0001:0000e425+ playsong_
+0001:0000e612  menusong_
+0001:0000e6e5  startmusic_
+0001:0000e7e6  songmastervolume_
+0001:0000e80a  soundmastervolume_
+0001:0000e83b  musicfade_
+0001:0000e8bf  musicoff_
+0001:0000e8fd  stopallsounds_
+0001:0000e9c6  uninitsb_
+0001:0000eb5c+ initlooptable_
+0001:0000ebdc* tekprepdigiloops_
+0001:0000ec54* SND_LoadLoop_
+0001:0000ee76+ SND_SwapLoops_
+0001:0000eefd+ _hmiINIOpen
+0001:0000eff2+ _hmiINIClose
+0001:0000f053+ hmiINIGetHexIndex_
+0001:0000f088+ hmiINIHex2Decimal_
+0001:0000f0bf+ _hmiINILocateSection
+0001:0000f13c+ _hmiINIGetDecimal
+0001:0000f1e4+ _hmiINILocateItem
+0001:0000f289+ _hmiINIGetItemDecimal
+0001:0000f2b9+ readhmicfg_
+0004:000dcba4+ _drumbankptr
+0004:000dcbaa+ _melodicbankptr
+0004:000dcbb0+ _digitalbankptr
+0003:00000000+ _timerhandle1
+Module: tekstat.obj(C:\TEKSRC2\SRC\tekstat.c)
+0004:000dcbb8+ _prevspritesectptr
+0004:000e0bb8+ _prevspritestatptr
+0004:000e4bb8+ _nextspritesectptr
+0004:000e8bb8+ _nextspritestatptr
+0004:000ecbb8+ _stackedcheck
+0004:000ecbbc+ _headspritestatptr
+0004:000edbc0+ _headspritesectptr
+0004:000eebc4+ _vadd
+0004:000eebc8+ _XTsave
+0004:000eebec+ _pickupclock
+0001:0000f3de  jsinsertsprite_
+0001:0000f496  jsdeletesprite_
+0001:0000f4f1+ isaplayersprite_
+0001:0000f53e  validext_
+0001:0000f552+ clearXTpics_
+0001:0000f615+ mapXT_
+0001:0000f699+ noextcrash_
+0001:0000f6bb+ verifystatus_
+0001:0000f6f3  initsprites_
+0001:0000f7d7  initspriteXTs_
+0001:0000fbd8+ isvisible_
+0001:0000fcab+ getpicinfo_
+0001:0000fd19* wallangle_
+0001:0000fd49+ arbitraryangle_
+0001:0000fd8a+ wallnormal_
+0001:0000fdc0+ walldeflect_
+0001:0000fddc+ spritedeflect_
+0001:0000fe50+ tweakdeathdist_
+0001:0000fef2+ splash_
+0001:00010060  pickupsprite_
+0001:00010115  toss_
+0001:0001042a+ triggersprite_
+0001:000107ea  sectortriggersprites_
+0001:00010a79  bloodonwall_
+0001:00010cb5  spewblood_
+0001:00010eef  playervirus_
+0001:0001101f  attachvirus_
+0001:00011215+ deathdropitem_
+0001:0001150e+ deathsounds_
+0001:0001167b+ hideplea_
+0001:00011770+ fleescream_
+0001:000118e3* rubitinsound_
+0001:00011ab2+ newstatus_
+0001:00012238  damagesprite_
+0001:000123ea+ attackifclose_
+0001:00012522+ enemygunshot_
+0001:00012671  playergunshot_
+0001:0001283a+ enemywoundplayer_
+0001:000128d2+ enemyshootgun_
+0001:00012fa8  isahologram_
+0001:00012fed  isanandroid_
+0001:00013032+ enemynewsector_
+0001:00013281+ ambushyell_
+0001:00013351+ givewarning_
+0001:0001342f  statuslistcode_
+0001:00017775  playerhit_
+0001:000177ca+ checkblastarea_
+0001:000179ad+ genexplosion1_
+0001:00017b02+ genexplosion2_
+0001:00017c79  bombexplosion_
+0001:00017db4  androidexplosion_
+0001:00017ee1  blastmark_
+0001:00018004  forceexplosion_
+0001:0001820a+ sectorflash_
+0001:0001824e+ dosectorflash_
+0001:00018303  tekstatsave_
+0001:00018335  tekstatload_
+0004:00002f30+ _picinfoptr
+0004:00002f34+ _bobbing
+0004:00002fb4+ _leftof
+0004:00002fd6+ _rightof
+0004:00002ff8+ _ensfirsttime
+0004:000eebf0* _dbgfp2
+0004:000eebf4+ _XTtrailer
+0004:000eec16+ _sectflash
+0004:000eec1d  _pickup
+0004:000eec48+ _picinfo
+0004:000eec4d+ _vbad
+Module: tekchng.obj(C:\TEKSRC2\SRC\tekchng.c)
+0001:00018367  changehealth_
+0001:0001849c  changescore_
+0001:000184e2+ tekchangestun_
+0001:00018535  tekhealstun_
+0001:00018593  tekchangefallz_
+0004:000eec50+ _stuntics
+0004:000eec90  _stun
+0004:000eecd0  _fallz
+Module: tekspr.obj(C:\TEKSRC2\SRC\tekspr.c)
+0001:000186c2  kenmovesprite_
+0001:000187ea  floatmovesprite_
+0001:00018889  movesprite_
+0001:00018a79  flymovesprite_
+0001:00018b46  analyzesprites_
+0001:00019326  checktouchsprite_
+0001:00019994  operatesprite_
+0001:00019b2b+ dropit_
+0001:00019c25  playerdropitems_
+0004:00002ffc+ _dropangles
+0004:000eed10+ _dropanglecnt
+Module: tekgun.obj(C:\TEKSRC2\SRC\tekgun.c)
+0004:000eed14  _dieframe
+0004:000eed34+ _firepicdelay
+0004:000eed54+ _oneshot
+0004:000eed94* _ammo0
+0004:000eedb4+ _firedonetics
+0004:000eedf4  _weapons
+0004:000eee34+ _lastgun
+0004:000eee74  _ammo4
+0004:000eee94  _ammo5
+0004:000eeeb4  _ammo6
+0004:000eeed4  _ammo7
+0004:000eeef4  _ammo3
+0004:000eef14  _ammo8
+0004:000eef34  _drawweap
+0001:00019e8d  validplayer_
+0001:00019eb4  restockammo_
+0001:00019f0e+ tekgunrep_
+0001:00019f27  tekgundamage_
+0001:00019f7d+ hasammo_
+0001:0001a014  tekfiregun_
+0001:0001a06d+ playerwoundplayer_
+0001:0001a141  killscore_
+0001:0001a21d  playerpainsound_
+0001:0001a295+ shootgun_
+0001:0001b1a5  tekanimweap_
+0001:0001b79f  tekexplodebody_
+0001:0001ba89  gunstatuslistcode_
+0001:0001c5b1  tekdrawgun_
+0001:0001c86e  tekhasweapon_
+0001:0001c8df  tekgunsave_
+0001:0001c9c3  tekgunload_
+0004:00003008+ _guntype
+0004:00003098+ _gunbobx
+0004:000030c0+ _gunboby
+0004:000030e8* _maxdamage
+0004:000030f8* _mindamage
+0004:000eef74  _fireseq
+0004:000eefb4  _ammo1
+0004:000eefd4  _ammo2
+0004:000eeff4* _matgunpic
+0004:000eeff8  _goreflag
+0004:000eeffc+ _bobtics
+0004:000ef000+ _gunbob
+Module: tekmsc.obj(C:\TEKSRC2\SRC\tekmsc.c)
+0004:000ef004  _autocenter
+0004:000ef044+ _otoggles
+0004:000ef054+ _redshifts
+0004:000efc54+ _whiteshifts
+0004:000f0854+ _palette2
+0004:000f0b54  _palette1
+0004:000f0e54* _frameval
+0004:000f0e94  _invredcards
+0004:000f0ed4  _invbluecards
+0004:000f0f14  _invaccutrak
+0004:000f0f54  _tektempbuf
+0004:000f1054+ _messagebuf
+0004:000f107c+ _lastinvacc
+0004:000f1080* _netclock
+0004:000f1084+ _warpretsect
+0004:000f1088+ _warpretx
+0004:000f108c+ _warprety
+0004:000f1090* _warpretz
+0004:000f1094+ _fortieth
+0004:000f1098+ _warpretang
+0004:000f109c  _difficulty
+0004:000f10a0+ _lastscore
+0004:000f10a4+ _rvmoving
+0004:000f10a8+ _lastsec
+0004:000f10ac  _mousesensitivity
+0004:000f10b0+ _menudirect
+0004:000f10b4+ _curblinkclock
+0004:000f10b8+ _wpmoving
+0004:000f10bc+ _hcmoving
+0004:000f10c0+ _messagex
+0004:000f10c4+ _lastwx2
+0004:000f10c8+ _lastinvb
+0004:000f10cc+ _lastinvr
+0004:000f10d0  _nobriefflag
+0004:000f10d4+ _curblink
+0004:000f10d8+ _loadnewgame
+0004:000f10dc+ _timedinv
+0004:000f10e0  _nostalkflag
+0004:000f10e4  _noenemiesflag
+0004:000f10e8  _loadsavenames
+0004:000f1124+ _whitecount
+0004:000f1128+ _locmessagelen
+0004:000f112c  _nochaseflag
+0004:000f1130  _noguardflag
+0004:000f1134+ _lockeybuf
+0004:000f1140+ _loctypemode
+0004:000f1144  _nostrollflag
+0004:000f1148* _framecnt
+0004:000f114c+ _redcount
+0004:000f1150+ _symbols
+0004:000f115e+ _symbolsdeposited
+0004:000f116c+ _oldgphandler
+0004:000f1172+ _hcpos
+0004:000f1174+ _wppos
+0004:000f1176+ _rvpos
+0004:000f1178  _singlemapmode
+0004:000f1179  _novideoid
+0004:000f117a  _generalplay
+0004:000f117b+ _hconemotime
+0004:000f117c+ _lasttimetoggle
+0004:00003108+ _headbobstr
+0004:00003115+ _menu
+0004:00003577+ _lastselopt
+0004:000035b7* _blink
+0004:000035b8* _menuspincnt
+0004:000035bc  _activemenu
+0004:000035bd  _dofadein
+0004:000035be+ _selopt
+0004:000035c2  _gameover
+0004:000035c3+ _demowon
+0004:000035c4* _outofsync
+0004:000035c5  _musicv
+0004:000035c9  _soundv
+0004:000035cd* _winner
+0004:000035cf+ _currentmapno
+0004:000035d3  _mission
+0004:000035d7+ _numlives
+0004:000035d8+ _mission_accomplished
+0004:000035d9+ _civillianskilled
+0004:000035dd* _newnetleader
+0004:000035e1* _oldnetleader
+0004:000035e5+ _allsymsdeposited
+0004:000035e9+ _killedsonny
+0001:0001caa7* newgphandler_
+0001:0001cad6  installgphandler_
+0001:0001cad7* clearpal_
+0001:0001cb00+ getpalette_
+0001:0001cb2b* fillpalette_
+0001:0001cb73  fadeout_
+0001:0001cc4d+ clearkeys_
+0001:0001cc63  fadein_
+0001:0001cd32* fog_
+0001:0001cd4b  initpaletteshifts_
+0001:0001ce83+ startwhiteflash_
+0001:0001ce99  woundflash_
+0001:0001cec7  criticalflash_
+0001:0001cef5  bonusflash_
+0001:0001cf23* burnflash_
+0001:0001cf28+ startredflash_
+0001:0001cf46+ updatepaletteshifts_
+0001:0001d06f  setup3dscreen_
+0001:0001d265+ finishpaletteshifts_
+0001:0001d291  showmessage_
+0001:0001d304* tekfirstpass_
+0001:0001d310  tekgamestarted_
+0001:0001d3b6  tekprivatekeys_
+0001:0001d8b9  redrawbackfx_
+0001:0001dace+ holyon_
+0001:0001db06+ holyoff_
+0001:0001db46* showtime_
+0001:0001dcc2* showscore_
+0001:0001de89+ showinv_
+0001:0001e2f3  nextnetlevel_
+0001:0001e52d+ netstats_
+0001:0001e5df  tekscreenfx_
+0001:0001ee2b  tektime_
+0001:0001eec9  initmenu_
+0001:0001eed8  newgame_
+0001:0001ef48  accessiblemap_
+0001:0001effb+ mapreturn_
+0001:0001f23b  newmap_
+0001:0001f423+ getloadsavenames_
+0001:0001f4ad+ mprintf_
+0001:0001f6b7+ showmenu_
+0001:0001f7d9+ showhelpscreen_
+0001:0001f8d7+ domenu_
+0001:0001fd83  domenuinput_
+0001:0002048a+ rearview_
+0001:000206b7+ usage_
+0001:0002073a  tekargv_
+0001:00020bbc  tekloadmoreoptions_
+0001:00020c38  initmoreoptions_
+0001:00020cee  teksavemoreoptions_
+0001:00020d94* tekendscreen_
+0001:0002111f  choosemission_
+0001:00021aea  teksavemissioninfo_
+0001:00021bb7  tekloadmissioninfo_
+0001:00021cb9* teknetmenu_
+0001:00021d39  copyrightscreen_
+0001:00021eef+ choosemap_
+0001:0002258f  missionaccomplished_
+0001:0002271b  depositsymbol_
+0001:0002280a  missionfailed_
+0001:000228d7* debriefing_
+0004:000035ed  _mapnames
+0004:0000366d+ _realmapnames
+0004:000036ed+ _missionset
+0004:00003795  _debrief
+0004:000f117d+ _rvonemotime
+0004:000f117e+ _lastscoretoggle
+0004:000f117f+ _wponemotime
+0004:000f1180+ _lastinvtoggle
+0004:000f1181  _rearviewdraw
+0004:000f1182+ _redrawborders
+0004:000f1183+ _palshifted
+0004:000f1184* _depresscount
+0004:000f1185* _requesttoquit
+0004:000f1186  _notininventory
+Module: tektxt.obj(C:\TEKSRC2\SRC\tektxt.c)
+0004:000f11a8* _crend
+0004:000f11ac* _crstart
+0004:000f11d4  _ovmode
+0004:000f11d8* _gameseconds
+0004:000f11dc* _dtime
+0004:000f11e0  _regs
+0004:000f11fc  _sregs
+0004:000f1208+ _rmi
+0004:000f123a+ _reqptr
+0004:000f1240+ _gcdbusy
+0004:000f1242+ _gcderror
+0004:000f1244+ _gcddone
+0004:000f1246+ _gcdint
+0004:000f1248+ _gcderrcode
+0004:000f124a+ _gcdhdraddr
+0004:000f124c+ _gcdstr
+0001:00022a5f  endgametime_
+0001:00022a5f  startgametime_
+0001:00022a60+ getvmode_
+0001:00022a88  crash_
+0001:00022af6+ setatr_
+0001:00022b08* setcsize_
+0001:00022b4f+ gotoxy_
+0001:00022ba7+ getcurs_
+0001:00022c20+ setregion_
+0001:00022c38+ scrollup_
+0001:00022c9e* scrolldn_
+0001:00022cc0+ clrregion_
+0001:00022d2a+ tprintf_
+0001:00022e21+ printfat_
+0001:00022e9d+ criterrhndlr_
+0001:00022eb3+ getDOSmem_
+0001:00022f08+ freeDOSmem_
+0001:00022f45* cdinfo_
+0001:000230b3* cdioctl_
+0001:0002333a* meminfo_
+0001:00023442* dpmiinfo_
+0001:00023575+ verifycd_
+0001:0002369f  tektextmode_
+0004:00003798  _bypasscdcheck
+0004:00003799  _cddriveletter
+0004:0000379a+ _criticalerror
+0004:0000379e+ _vmodeflag
+0004:000f124e+ _gcdsubunit
+Module: tekmap.obj(C:\TEKSRC2\SRC\tekmap.c)
+0001:000237ca  drawoverheadmap_
+Module: tekldsv.obj(C:\TEKSRC2\SRC\tekldsv.c)
+0001:00024aaa  loadgame_
+0001:000255f5  savegame_
+Module: teksmk.obj(C:\TEKSRC2\SRC\teksmk.c)
+0001:0002610e  RADMALLOC
+0001:00026190  RADFREE
+0001:000261bd  videocheck_
+0001:00026217  smkinit_
+0001:00026256  smkuninit_
+0001:00026269  smkplayseq_
+0001:000263a5  smkopenmenu_
+0001:00026430  smkshowmenu_
+0001:00026431  smkmenuframe_
+0001:0002645a  smkclosemenu_
+0004:000f1250+ _radbuf
+0004:000f12e0* _menubuf
+0004:000f12e4+ _smkmenu
+0004:000f12e8+ _smacktrak
+Module: tekasm.obj(tekasm.asm)
+0001:0002648c  asmwaitvrt_
+0001:000264a3  asmsetpalette_
+0001:000264bf* asmoverscan_
+0001:000264db  asmoverflash_
+0001:0002651e* asmcpuid_
+Module: jstick.obj(jstick.asm)
+0001:0002655f  jstick_
+Module: tekcdr.obj(C:\TEKSRC2\SRC\tekcdr.c)
+0004:000f12ec* _bufoff
+0004:000f13b4* _bufseg
+0004:000f147c+ _redbook
+0004:000f14e0+ _rmregs
+0004:000f1512+ _cddevadr
+0004:000f1518+ _namebuf
+0004:000f151e+ _cdlotrack
+0004:000f1520+ _rmoff
+0004:000f1522* _cdtracktoplay
+0004:000f1524+ _cmdoff
+0004:000f1526+ _cdhdl
+0004:000f1528+ _nameoff
+0004:000f152a+ _cdhitrack
+0004:000f152c+ _devoff
+0001:000265c3+ rmint86_
+0001:00026633+ alcmem_
+0001:00026695+ ismscdex_
+0001:000266f4+ cd_getname_
+0001:0002678e+ sendIOcmd_
+0001:000267f5* cd_opendoor_
+0001:0002682a* cd_closedoor_
+0001:0002685f+ cd_reset_
+0001:00026894+ cd_getaudiodisk_
+0001:00026908+ cd_getaudiotrack_
+0001:0002698c  cdpreinit_
+0001:00026aad  cduninit_
+0001:00026ad3  cd_stop_
+0001:00026b81+ cd_playtrack_
+0001:00026d38+ cd_resumeplay_
+0001:00026dd5  cd_play_
+0001:00026ecd  cd_stopplay_
+0001:00026f08  cd_advancetrack_
+0001:00026f77  cd_retardtrack_
+0001:00026fe6  cd_resetdisc_
+0004:000037b0+ _currenttrack
+0004:000037b4  _cdplaying
+0004:000f152e+ _cmdseg
+0004:000f1530+ _rmseg
+0004:000f1532+ _cddrive
+0004:000f1534+ _nameseg
+0004:000f1536+ _cddrives
+0004:000f1538+ _devseg
+0004:000f153a+ _cdpaused
+0004:000f153c+ _cddevname
+0004:000f1545+ _leadout
+0004:000f154a+ _oldmusicmode
+Module: sndhmir.obj(C:\DEVEL\PROJECTS\SMACK\sndhmi.cpp)
+0001:000270ac  _SetSmackSOSHandle
+0001:000270e8  LOWSOUNDDRIVERLOADED
+0001:000270f4  LOWSOUNDDRIVERLOAD
+0001:00027424  LOWSOUNDDRIVERUNLOAD
+0001:00027468+ _hmi_cb
+0001:000275b8  LOWSOUNDOPEN
+0001:00027804  LOWSOUNDCHECK
+0001:000278a0  LOWSOUNDPLAYED
+0001:000279a8  LOWSOUNDPURGE
+0001:000279ec  LOWSOUNDCLOSE
+0001:00027a8c  LOWSOUNDOFF
+0001:00027a90+ hmi_int_
+0001:00027a9c  _SmackTimerSetup
+0001:00027b18  _SmackTimerRead
+0001:00027b6c  _SmackTimerDone
+0001:00027ba8  LOWSOUNDON
+0001:00027bb0  LOWSOUNDSLOWTIMER
+0001:00027bd4  LOWSOUNDRESTORETIMER
+0001:00027c00* LOWSOUNDSHUTDOWN
+Module: engine.obj(D:\engine.c)
+0004:000f5868  _palette
+0004:0013df68+ _textfont
+0004:001633e8+ _smalltextfont
+0004:001637e8+ _tilefilenum
+0004:0016b7e8+ _walsiz
+0004:001717e8+ _tilefileoffs
+0004:00178aa8+ _picsiz
+0004:00179aa8  _gotsector
+0004:00179b28+ _gotpic
+0004:00183328  _pskyoff
+0004:00183528  _show2dsector
+0004:001835a8  _picanm
+0004:001875a8  _show2dwall
+0004:001879a8+ _startumost
+0004:00188628  _tilesizx
+0004:0018a628  _tilesizy
+0004:0018c628  _prevspritesect
+0004:0018e628+ _startdmost
+0004:0018f2a8  _nextspritesect
+0004:001912a8  _nextspritestat
+0004:001932a8  _prevspritestat
+0004:001952a8  _waloff
+0004:001992a8  _show2dsprite
+0004:001994a8  _palookup
+0004:001998a8  _sprite
+0004:001c48a8  _sintable
+0004:001c58a8  _wall
+0004:002058a8  _tsprite
+0004:002104a8  _sector
+0004:002198cc+ _searchy
+0004:002198d0+ _searchx
+0004:002198d4+ _ydim16
+0004:002198d8* _startposy
+0004:002198dc* _startposx
+0004:002198e0* _startposz
+0004:002198e4+ _frameplace
+0004:002198e8+ _pageoffset
+0004:002198ec+ _globalx1
+0004:002198f0+ _globalx2
+0004:002198f4+ _globalorientation
+0004:002198f8+ _globalshade
+0004:002198fc+ _globaly1
+0004:00219900+ _globaly2
+0004:00219904+ _globalzd
+0004:00219908* _globalzx
+0004:0021990c+ _globalbufplc
+0004:00219918  _asm1
+0004:0021991c  _asm2
+0004:00219920  _asm3
+0004:00219924  _asm4
+0004:00219928+ _globalyscale
+0004:00219930+ _globalxpanning
+0004:00219934+ _globalypanning
+0004:0021b28c+ _stereowidth
+0004:0021b290+ _mapversion
+0004:0021b294+ _stereopixelwidth
+0004:0021b298+ _artversion
+0004:0021b2a4+ _chainsiz
+0004:0021b2a8+ _chainplace
+0004:0021b2ac+ _page
+0004:0021b2b0  _windowy2
+0004:0021b2b4  _windowy1
+0004:0021b2b8  _windowx2
+0004:0021b2bc  _windowx1
+0004:0021b2c0+ _numtiles
+0004:0021b2c4  _visibility
+0004:0021b2c8+ _xyaspect
+0004:0021b2cc+ _ylookup
+0004:0021c590  _numframes
+0004:0021c594  _parallaxyoffs
+0004:0021c598  _randomseed
+0004:0021c59c  _yxaspect
+0004:0021c5a0+ _numpages
+0004:0021c5a4  _spritesortcnt
+0004:0021c5a8  _totalclock
+0004:0021c5ac  _ydim
+0004:0021c5b0  _xdim
+0004:0021c836  _headspritestat
+0004:0021d038  _headspritesect
+0004:0021d83c+ _numscans
+0004:0021d83e+ _searchstat
+0004:0021d840+ _numbunches
+0004:0021d842+ _searchsector
+0004:0021d844+ _numhits
+0004:0021d848+ _searchwall
+0004:0021d84a+ _searchit
+0004:0021d850+ _highlightcnt
+0004:0021d852+ _linehighlight
+0004:0021d854* _startang
+0004:0021d856* _startsectnum
+0004:0021d85a+ _pointhighlight
+0004:0021d85c+ _globalpicnum
+0004:0021d85e+ _globalshiftval
+0004:0021d86a  _pskybits
+0004:0021d86c  _numwalls
+0004:0021d86e  _numsectors
+0004:0021d870  _numpalookups
+0004:0021d872+ _paletteloaded
+0004:0021d873+ _globalxshift
+0004:0021d874+ _globalyshift
+0004:0021d875+ _vesapageshift
+0004:0021d876+ _curpag
+0004:00003819+ _chainnumpages
+0004:0000381d* _tsengdriver
+0004:0000381e+ _stereofps
+0004:00003826+ _pic
+0004:0000382a+ _artsize
+0004:0000382e+ _cachesize
+0004:0000383b  _qsetmode
+0004:0000383f+ _transluc
+0004:00003843+ _translucloaded
+0004:000038f6+ _editstatus
+0001:00027c2c  drawrooms_
+0001:00028019+ scansector_
+0001:0002872c+ wallfront_
+0001:00028941+ spritewallfront_
+0001:0002898b+ bunchfront_
+0001:00028a25+ drawalls_
+0001:0002aac7+ ceilscan_
+0001:0002b11c+ florscan_
+0001:0002b793+ wallscan_
+0001:0002c39c+ maskwallscan_
+0001:0002cf6b+ transmaskwallscan_
+0001:0002d12e  loadboard_
+0001:0002d2c1* saveboard_
+0001:0002d43d+ loadtables_
+0001:0002d500+ loadpalette_
+0001:0002d6fd  setgamemode_
+0001:0002d985+ hline_
+0001:0002dbce+ transmaskvline_
+0001:0002ddb8+ transmaskvline2_
+0001:0002e33c  initengine_
+0001:0002e700  uninitengine_
+0001:0002e7c0  nextpage_
+0001:0002ec4e  loadtile_
+0001:0002edb1* allocatepermanenttile_
+0001:0002ee8a  loadpics_
+0001:0002f19b* showengineinfo_
+0001:0002f215  resettiming_
+0001:0002f22c  clipinsidebox_
+0001:0002f317+ clipinsideboxline_
+0001:0002f3f8+ readpixel16_
+0001:0002f4cb  screencapture_
+0001:0002f9ec  inside_
+0001:0002fab8  getangle_
+0001:0002fba4  ksqrt_
+0001:0002fbdd+ calcksqrt_
+0001:0002fc1b* copytilepiece_
+0001:0002fd6b  printext_
+0001:00030028  drawmasks_
+0001:0003052a+ drawmaskwall_
+0001:00030c01+ drawsprite_
+0001:0003376d+ ceilspritescan_
+0001:000338bb+ ceilspritehline_
+0001:00033c57  overwritesprite_
+0001:0003412a  permanentwritesprite_
+0001:00034688+ grouvline_
+0001:00034e89  setsprite_
+0001:00034eeb+ animateoffs_
+0001:00034f76+ initspritelists_
+0001:0003504b  insertsprite_
+0001:00035060+ insertspritesect_
+0001:000350fe+ insertspritestat_
+0001:0003519c  deletesprite_
+0001:000351b0+ deletespritesect_
+0001:00035283+ deletespritestat_
+0001:00035356  changespritesect_
+0001:000353a6  changespritestat_
+0001:000353f6  nextsectorneighborz_
+0001:000354c8  cansee_
+0001:0003563b  hitscan_
+0001:0003628f  neartag_
+0001:000368f0+ lintersect_
+0001:00036a03+ rintersect_
+0001:00036afd  dragpoint_
+0001:00036baa  lastwall_
+0001:00036bfa  clipmove_
+0001:00036f0d+ getcliplines_
+0001:00037d61+ addclipline_
+0001:00037da2+ keepaway_
+0001:00037e4b+ raytrace_
+0001:00038053  pushmove_
+0001:00038347  updatesector_
+0001:0003840f  rotatepoint_
+0001:000384a1  initmouse_
+0001:000384b7  getmousevalues_
+0001:000384fb  printscreeninterrupt_
+0001:000384fe  drawline256_
+0001:00038987+ drawline16_
+0001:00038e21* qsetmode640350_
+0001:00038eb0* qsetmode640480_
+0001:00038fac+ clear2dscreen_
+0001:0003900e+ draw2dgrid_
+0001:000392b4* draw2dscreen_
+0001:00039ec1* printext16_
+0001:0003a199  printext256_
+0001:0003a313  krand_
+0001:0003a333  getzrange_
+0001:0003ae2f+ makeradarang_
+0001:0003aeb2  setview_
+0001:0003aff1+ setaspect_
+0001:0003b0cc  precache_
+0001:0003b185+ wallmost_
+0001:0003b783  rotatesprite_
+0001:0003bfb4+ clippoly4_
+0001:0003c25b  makepalookup_
+0001:0003c4bd+ setvesamode_
+0001:0003c5e3+ stereoinit_
+0001:0003c695+ setverts_
+0001:0003c8ab+ stereoblit_
+0001:0003c95c  setbrightness_
+0001:0003ca9c  drawmapview_
+0001:0003dea5+ clippoly_
+0001:0003ec32+ fillpolygon_
+0001:0003f41d+ setxmode_
+0001:0003fa15  clearview_
+0001:0003faac+ clearallviews_
+0001:0003fc03* plotpixel_
+0001:0003fc62* getpixel_
+0001:0003fcb3  permanentwritespritetile_
+0001:0003fd67* setviewtotile_
+0001:0003fe43* setviewback_
+0001:0003ff1f* squarerotatetile_
+0001:0003ffd6* sectorofwall_
+0004:0021d878+ _loadtilelockmode
+0004:0021d879  _automapping
+0004:0021d87a  _parallaxtype
+0004:0021d87b  _vidoption
+Module: cache1d.obj(cache1d.c)
+0001:0004008c  initcache_
+0001:000400bb  uninitcache_
+0001:00040148  allocache_
+0001:00040334  initgroupfile_
+0001:000404fe  uninitgroupfile_
+0001:00040533  kopen4load_
+0001:00040613  kread_
+0001:000406de  klseek_
+0001:00040758  kfilelength_
+0001:00040791  kclose_
+Module: a.obj(a.asm)
+0001:0005a382  setvlinebpl_
+0001:0005aa07  spritevline_
+0001:0005aa23  tsetupspritevline_
+0001:0005a43c  prevlineasm1_
+0001:0005aac4  mhline_
+0001:0005ac0b  thline_
+0001:0005a1cf  setpalookupaddress_
+0001:0005aa51  tspritevline_
+0001:0005a133  sethlinesizes_
+0001:0005aaa0  msethlineshift_
+0001:0005abe7  tsethlineshift_
+0001:0005a455  vlineasm1_
+0001:0005a53e  vlineasm4_
+0001:0005ad22  setuptvlineasm2_
+0001:0005a1f3  hlineasm64_
+0001:0005a494  mvlineasm1_
+0001:0005a672  mvlineasm4_
+0001:0005a4fb  tvlineasm1_
+0001:0005ad45  tvlineasm2_
+0001:0005ab11  mhlineskipmodify_
+0001:0005a4cd  fixtransluscence_
+0001:0005ac51  thlineskipmodify_
+0001:0005a9b9  setupspritevline_
+Module: multi.obj(multi.c)
+0004:00229ac0+ _omessconnectindex
+0004:00229b40+ _omessout
+0004:002323c0+ _netoutcnt
+0004:002323d0+ _netincnt
+0004:002323e0+ _omessleng
+0004:00232460+ _connectnum
+0004:002324a0+ _omessnum
+0004:002324c0+ _compaddr
+0004:00232580+ _crctable
+0004:00232980+ _outbufindex
+0004:00232b80  _connectpoint2
+0004:00232ba0+ _messin
+0004:00232ba4+ _messout
+0004:00232ba8+ _ipxout
+0004:00232bac+ _rmnethandler
+0004:00232bb0+ _netinbufplc
+0004:00232bb4+ _netinbuf
+0004:00232bb8+ _tempoutbuf
+0004:00232bbc+ _tempinbuf
+0004:00232bc0+ _netinbufend
+0004:00232bc4+ _ipxin
+0004:00232bc8* _neti
+0004:00232bcc+ _ecbput
+0004:00232bd0+ _outbufplc
+0004:00232bd4+ _ecbget
+0004:00232bd8+ _rmsegment16
+0004:00232bdc+ _outbufend
+0004:00232be0+ _inbufend
+0004:00232be4+ _rmoffset32
+0004:00232be8+ _mycompaddr
+0004:00232bf4+ _comport
+0004:00232bfc+ _comvect
+0004:00232c00+ _comescape
+0004:00232c04+ _comspeed
+0004:00232c08+ _comerror
+0004:00232c0c+ _comtype
+0004:00232c10+ _incnt
+0004:00232c14+ _comi
+0004:00232c18+ _inbufplc
+0004:00232c1c+ _outbuf
+0004:00232c20+ _inbuf
+0004:00232c24+ _comreset
+0004:00232c28+ _comtemp
+0004:00232c2c+ _comresend
+0004:00232c30+ _comnum
+0004:00232c34+ _otherconnectnum
+0004:00232c38+ _myconnectnum
+0004:00232c3c+ _outcnt
+0004:00232c40+ _syncbufleng
+0004:00232c44+ _getmess
+0004:00232e66+ _syncbuf
+0004:0000391c+ _syncstate
+0004:0000391d+ _hangup
+0004:00003920  _numplayers
+0004:00003922  _myconnectindex
+0004:00003aa4+ _socket
+0001:000407d0  initmultiplayers_
+0001:000408db  uninitmultiplayers_
+0001:00040903* netoff_
+0001:0004091c+ neton_
+0001:00040cbf+ comon_
+0001:00040eef+ comoff_
+0001:00040f6a+ netsend_
+0001:000411dc+ comsend_
+0001:00041252+ startcom_
+0001:000414d6+ netinitconnection_
+0001:00041643+ netuninitconnection_
+0001:0004169e  sendpacket_
+0001:00041b1f  getpacket_
+0001:00042076+ initcrc_
+0001:000420cb+ getcrc_
+0001:00042115+ convalloc32_
+0001:00042156+ simulateint_
+0001:00042225+ installbicomhandlers_
+0001:000423a6+ uninstallbicomhandlers_
+0001:00042427+ processreservedmessage_
+0001:000426d7  sendlogon_
+0001:00042790  sendlogoff_
+0001:00042805  getoutputcirclesize_
+0001:0004283e* setsocket_
+0004:0023308e  _connecthead
+Module: tekctm.obj(C:\TEKSRC2\SRC\tekctm.c)
+0001:0004290f  ctm_deinit_
+0001:0004292d  ctm_init_
+0001:00042a63* getserch_
+0001:00042a68  ctm_read_
+0001:00042b0b+ vio_deinit_
+0001:00042b20+ vio_reset_
+0001:00042b50+ vio_setup_
+0001:00042bb2  vio_init_
+0001:00042c74  vio_read_
+0001:00042d59* whvrmon_
+0004:002330c4  _iglassenabled
+0004:002330c8  _vfx1enabled
+0004:002330cc  _cyberenabled
+0004:002330d0+ _sd
+Module: tekvfx1.obj(C:\TEKSRC2\SRC\tekvfx1.c)
+0004:0023312c+ _buf
+0004:0023322c+ _config_buffer
+0004:0023332c+ _report_buffer
+0004:0023342c+ _svm
+0004:00233434+ _fp
+0004:00233438+ _sense_function
+0004:0023343c+ _report_offset
+0004:00233440+ _pdosmem
+0004:00233444+ _hms_cfg
+0004:00233448+ _vendor_cfg
+0004:0023344c+ _hpd_cfg
+0004:00233450+ _system_cfg
+0004:00233454+ _hpd_data
+0004:00233478+ _htd_cfg
+0004:0023347c+ _htd_data
+0004:002334a0+ _vip_csr_port
+0004:002334a4+ _vip_air_port
+0001:00042d5a+ allocDOS_
+0001:00042dc9+ VFX1MouseInt_
+0001:00042e3b  vfx1_read_
+0001:00042ec5+ SenseStatus_
+0001:00042f33+ SenseGetConfiguration_
+0001:00042fa3+ SenseSetConfiguration_
+0001:0004300a+ SenseReport_
+0001:00043096  vfx1_init_
+0004:00003c28+ _butkeystr
+0004:00003c34+ _butoptstr
+0004:00003c58+ _butoptval
+0004:002334da  _puckbutton
+0004:002334e0  _puckroll
+0004:002334e2+ _selector
+0004:002334e4+ _segment
+0004:002334e6  _puckpitch
+0004:002334e8+ _vfx1_cyberpuck
+0004:002334e9  _puckbuttons
+Module: av_wc10r.obj(V:\DEV\NEWPROJ\SDK\SRC\REALDOS\AVLIB.C)
+0001:0004336a+ GETVECT_
+0001:0004389f+ SpwOpenDriver_
+0001:0004393e+ SpwCloseDriver_
+0001:00043977+ SpwOpenDevice_
+0001:000439a8+ SpwCloseDevice_
+0001:000439e6+ SpwEnableDevice_
+0001:00043a1a+ SpwDisableDevice_
+0001:00043a4e* SpwGetForce_
+0001:00043a7f* SpwGetButton_
+0001:00043ab0  SPW_IsInputEvent_
+0001:00043c1d  SPW_InputCheckForSpaceball_
+0001:00043dd9  SPW_InputShutdown_
+0004:002334fe+ _SpwError
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fprintf)
+0001:00043e24  fprintf_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fclose)
+0001:00043e45  fclose_
+0001:00043e72  __shutdown_stream_
+0001:00043e93+ __MkTmpFile_
+0001:00043ef8  __doclose_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(sprintf)
+0001:00043f9b  sprintf_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fopen)
+0001:00043fcb+ __open_flags_
+0001:00044160+ _fsopen_
+0001:00044199  fopen_
+0001:0004420b* freopen_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(printf)
+0001:0004424d  printf_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(memcpy)
+0001:0004426f  memcpy_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(exit)
+0001:00044294+ __null_int23_exit_
+0001:00044295  exit_
+0001:000442ad+ _exit_
+0004:00003ec8+ ___atexit
+0004:00003ecc+ ___int23_exit
+0004:00003ed0+ ___FPE_handler_exit
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strcpy)
+0001:000442c3  strcpy_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(d_getvec)
+0001:000442e2  _dos_getvect_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(disable)
+0001:00044314  _disable_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(d_setvec)
+0001:00044316  _dos_setvect_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(enable)
+0001:00044343  _enable_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(cstrt386)
+0001:00000003* ___begtext
+0004:00000000* __nullarea
+0004:0000cde9* __start_TI
+0004:0000cde9* __end_TI
+0004:00003ed4* __GDAptr
+0004:00003ed8* __D16Infoseg
+0004:00003eda* __x386_zero_base_selector
+0001:00044348  _cstart_
+0001:000445d7  __exit_
+0001:000445d9  __do_exit_with_msg__
+0001:00044614  __GETDS
+Module: C:\WATCOM\lib386\dos\clib3r.lib(argcv386)
+0004:00003edc  __argc
+0004:00003ee0  __argv
+Module: C:\WATCOM\lib386\dos\clib3r.lib(accss)
+0001:00044620  access_
+0001:00044620* _access_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(chmod)
+0001:0004465b  chmod_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(labs)
+0001:00044697  labs_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fgetc)
+0001:0004469e  fgetc_
+0001:00044727+ __filbuf_
+0001:00044756+ __fill_buffer_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fgets)
+0001:00044802  fgets_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strstr)
+0001:0004486b  strstr_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strlen)
+0001:00044929  strlen_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(sscanf)
+0001:0004496f+ vsscanf_
+0001:00044996  sscanf_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(set386)
+0001:000449c0  memset_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(open)
+0001:000449d8  open_
+0001:000449fc  sopen_
+0001:00044be5* __set_binary_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(read)
+0001:00044c4a  read_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(close)
+0001:00044d45  close_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(write)
+0001:00044d4a  write_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(__stos)
+0001:00044f20  __STOSB
+0001:00044f57  __STOSD
+Module: C:\WATCOM\lib386\dos\clib3r.lib(abs)
+0001:00044fc3  abs_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strupr)
+0001:00044fca  strupr_
+0001:00044fca* _strupr_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(cmp386)
+0001:00044ff0  strcmp_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(memmove)
+0001:00045091  memmove_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strncmp)
+0001:000450de  strncmp_
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSTMR.C)
+0001:00045107  sosDIGITmr_Start_
+0001:0004511c  sosTIMERInitSystem_
+0001:000451f8  sosTIMERUnInitSystem_
+0001:00045232  sosTIMERRegisterEvent_
+0001:0004543f  sosTIMERAlterEventRate_
+0001:000455b7  sosTIMERRemoveEvent_
+0001:00045766  sosTIMERGetEventRate_
+0001:00045790+ sosTIMERSetRate_
+0001:000457c5+ sosTIMERHandler_
+0001:0004588f+ sosTIMEROldHandler_
+0001:000458a9  sosDIGITmr_End_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(outp)
+0001:000458be  outp_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(nmalloc)
+0001:000458c8  _nmalloc_
+0001:000458c8  malloc_
+0004:00003ee4  ___nheapbeg
+0004:00003ee8  ___MiniHeapRover
+0004:00003eec  ___LargestSizeB4MiniHeapRover
+Module: C:\WATCOM\lib386\dos\clib3r.lib(lseek)
+0001:000459ab  lseek_
+0001:000459ab* _lseek_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(nfree)
+0001:000459ee  _nfree_
+0001:000459ee  free_
+0004:0023360c+ ___MiniHeapFreeRover
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMINS.C)
+0001:00045a70  sosMIDIIns_Start_
+0001:00045a85  sosMIDISetInsData_
+0001:00045ac2* sosMIDISetMT32InsData_
+0001:00045ba2+ sosMIDIMT32Timer_
+0001:00045bbe  sosMIDIIns_End_
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSINIT.C)
+0001:00045bd3+ sosDIGIInit_Start_
+0001:00045be8+ sosDIGILockMemory_
+0001:00045eae+ sosDIGIUnLockMemory_
+0001:00046174  sosDIGIInitSystem_
+0001:000461ed  sosDIGIUnInitSystem_
+0001:0004622d  sosDIGIInitDriver_
+0001:00046aed  sosDIGIUnInitDriver_
+0001:00046d05+ sosDIGIAllocateBuffer_
+0001:00046de5+ sosAllocVDSPage_
+0001:00046f01+ sosFreeVDSPage_
+0001:00046f7d+ sosDIGIInit_End_
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSCNTL.C)
+0001:00046f92  sosDIGICntl_Start_
+0001:00046fa7* sosDIGIGetDMAPosition_
+0001:00046fd3  sosDIGISetSampleVolume_
+0001:00047057* sosDIGIGetSampleVolume_
+0001:000470be* sosDIGISetChannel_
+0001:00047142* sosDIGIGetChannel_
+0001:000471a9* sosDIGIGetBytesProcessed_
+0001:0004720f* sosDIGIGetLoopCount_
+0001:00047276  sosDIGISetPanLocation_
+0001:000472fa* sosDIGIGetPanLocation_
+0001:00047361* sosDIGISetPanSpeed_
+0001:000473e5* sosDIGIGetPanSpeed_
+0001:0004744c* sosDIGISetPitch_
+0001:000474ce* sosDIGIGetPitch_
+0001:00047534  sosDIGIGetSampleID_
+0001:0004756c* sosDIGIGetSampleHandle_
+0001:000475cb  sosDIGISetMasterVolume_
+0001:00047601  sosDIGICntl_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMINIT.C)
+0001:00047616+ sosMIDIInit_Start_
+0001:0004762b+ sosMIDILockMemory_
+0001:000478c6+ sosMIDIUnLockMemory_
+0001:00047b61  sosMIDIInitSystem_
+0001:00047ccd  sosMIDIUnInitSystem_
+0001:00047d0d  sosMIDIInitDriver_
+0001:00048232  sosMIDIUnInitDriver_
+0001:00048349* sosMIDIResetDriver_
+0001:00048427+ sosMIDIInit_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMSONG.C)
+0001:0004843c  sosMIDISong_Start_
+0001:00048451  sosMIDIInitSong_
+0001:00048c2c  sosMIDIUnInitSong_
+0001:00048c76  sosMIDIStartSong_
+0001:00048d05  sosMIDIStopSong_
+0001:00048e11  sosMIDIResetSong_
+0001:000490b3  sosMIDIGetDeltaTime_
+0001:0004913d  sosMIDISetMasterVolume_
+0001:000491a8* sosMIDIRegisterLoopFunction_
+0001:000491e4* sosMIDIRegisterBranchFunction_
+0001:00049220* sosMIDIRegisterTriggerFunction_
+0001:00049269* sosMIDIBranchToTrackLocation_
+0001:00049466* sosMIDIBranchToSongLocation_
+0001:00049633  sosMIDISong_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMST.C)
+0001:00049648  sosMIDISt_Start_
+0001:0004965d  sosMIDIHandleMIDIData_
+0001:0004a15b  sosMIDIResetChannelStealing_
+0001:0004a541* sosMIDISendMIDIData_
+0001:0004a582  sosMIDIEnableChannelStealing_
+0001:0004a5b3  sosMIDISt_End_
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSSTART.C)
+0001:0004a5c8  sosDIGIStart_Start_
+0001:0004a5dd  sosDIGIStartSample_
+0001:0004abf6  sosDIGIStopSample_
+0001:0004aca4  sosDIGIContinueSample_
+0001:0004b01b  sosDIGIStart_End_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(flushall)
+0001:0004b030  flushall_
+0001:0004b035  __flushall_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(filelen)
+0001:0004b064  filelength_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(tell)
+0001:0004b0a1  tell_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMPAUS.C)
+0001:0004b0b2  sosMIDIPause_Start_
+0001:0004b0c7* sosMIDIPauseSong_
+0001:0004b22a* sosMIDIResumeSong_
+0001:0004b395* sosMIDIMuteSong_
+0001:0004b47c* sosMIDIUnMuteSong_
+0001:0004b5ab  sosMIDISetSongVolume_
+0001:0004b6f7  sosMIDIFadeSong_
+0001:0004b806  sosMIDIPause_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMDONE.C)
+0001:0004b81b  sosMIDIDone_Start_
+0001:0004b830  sosMIDISongDone_
+0001:0004b870  sosMIDIDone_End_
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSDONE.C)
+0001:0004b885  sosDIGIDone_Start_
+0001:0004b89a  sosDIGISampleDone_
+0001:0004b8f3* sosDIGISampleFilling_
+0001:0004b970  sosDIGIDone_End_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(toupper)
+0001:0004b985  toupper_
+0001:0004b985* _toupper_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(atoi)
+0001:0004b993  atoi_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(chint386)
+0001:0004ba00  _chain_intr_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(inp)
+0001:0004ba19  inp_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(vsprintf)
+0001:0004ba34  vsprintf_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strncpy)
+0001:0004ba49  strncpy_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(isalpha)
+0001:0004ba6e  isalpha_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(isdigit)
+0001:0004ba7c  isdigit_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strchr)
+0001:0004ba8a  strchr_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(creat)
+0001:0004ba9e  creat_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(rand)
+0001:0004bab1  rand_
+0001:0004bad5* srand_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(int386)
+0001:0004bae5  int386_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(vprintf)
+0001:0004bb02  vprintf_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(intr)
+0001:0004bb13  intr_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(hrder386)
+0001:0004bb18  _harderr_
+0001:0004bbd8  _hardresume_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(intx386)
+0001:0004bbf5  int386x_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fmemcpy)
+0001:0004bc0e  _fmemcpy_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(segread)
+0001:0004bc36  segread_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fstrcpy)
+0001:0004bc5e  _fstrcpy_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(remove)
+0001:0004bc8d  remove_
+Module: smack.lib(C:\DEVEL\PROJECTS\SMACK\svga.cpp)
+0004:00233a44* _PhysicalToUse
+0004:00233a50+ _SetReadBankToUse
+0004:00233ab8+ _VGASize
+0004:00233abc+ _EndVGA
+0004:00233ac0+ _BytesPerScanToUse
+0004:00233ac4+ _WidthToUse
+0004:00233ac8+ _HeightToUse
+0004:00233acc+ _StartVGA
+0004:00233ad0+ _WinTblToUse
+0004:00003f40+ _curmodetouse
+0004:00003f42  _CurBankToUse
+0004:00003f44  _CurReadBankToUse
+0004:00003f48+ _SetBankToUse
+0004:00003f4c  _WinFuncPtrToUse
+0004:00003f50+ _SVGAVESASetting
+0001:0004bca0* SetGran_
+0001:0004bfa0  SVGADETECT
+0001:0004c2a8  SVGASETUP
+0001:0004c2e8  SVGADETECTED
+0001:0004c354* SVGASETTEXT
+0001:0004c370  SVGASETGRAPH
+0001:0004c3bc* SVGACLEAR
+0001:0004c468  SVGABYTESPS
+0001:0004c470  SVGASETBANK
+0001:0004c478  SVGAWINTBL
+0004:00003f60+ _SetBanks
+0004:00003f6c+ _SetInits
+0004:00003f78+ _LastPhysical
+0004:00003f7c+ _LastLinear
+0004:00233ae8  _WritWindowToUse
+0004:00233aea  _ReadWindowToUse
+0004:00233aec+ _IsBanked
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strcat)
+0001:0004c47e  strcat_
+Module: smack.lib(C:\DEVEL\PROJECTS\SMACK\smackinp.cpp)
+0001:0004d134* GetFirstTrack_
+0001:0004d164  SMACKOPEN
+0001:0004d76c* SMACKSIMULATE
+0001:0004d778* SMACKSOUNDONOFF
+0001:0004d96c* SMACKFRAMERATE
+0001:0004d9e8  SMACKCLOSE
+0001:0004de2c  SMACKDOFRAME
+0001:0004e004* SMACKSUMMARY
+0001:0004e0c8  SMACKNEXTFRAME
+0001:0004e198  SMACKTOSCREEN
+0001:0004e6c8* SMACKTOBUFFER
+0001:0004e848* SMACKCOLORTRANS
+0001:0004e880* SMACKCOLORREMAP
+0001:0004eabc* SMACKGETTRACKDATA
+0001:0004ebc4  SMACKGOTO
+0001:0004ebe8* SMACKTOBUFFERRECT
+0001:0004ee08* SMACKSOUNDINTRACK
+0001:0004ee74* SMACKVOLUME
+0001:0004ef18* SMACKSOUNDCHECK
+0001:0004ef2c  SMACKWAIT
+Module: smack.lib(palet.ASM)
+0001:0004f030  _PaletteSet
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fmemmove)
+0001:0004f065  _fmemmove_
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSDETEC.C)
+0001:0004f0c7  sosDIGIDetec_Start_
+0001:0004f0dc  sosDIGIDetectInit_
+0001:0004f226  sosDIGIDetectUnInit_
+0001:0004f2b1  sosDIGIDetectFindHardware_
+0001:0004f534* sosDIGIDetectGetCaps_
+0001:0004f6ca* sosDIGIDetectFindFirst_
+0001:0004f91c* sosDIGIDetectFindNext_
+0001:0004fb42  sosDIGIDetectGetSettings_
+0001:0004fcca* sosDIGIDetectVerifySettings_
+0001:0004fd9b  sosDIGIDetec_End_
+Module: smack.lib(unsmack.ASM)
+0001:0005b370  _SmackDoTables
+0001:0005b300  _SmackGetSizeTables
+0001:0005dd30  _SmackDoPCM
+0001:0005e610  _SmackRemapTables
+0001:0005db40  _SmackWrapCopy
+0001:0005b620  _SmackDoFrameToBuffer
+0001:0005c7f0  _SmackDoFrameToVESA
+0001:0005e4d0  _SmackGetSizeDeltas
+0001:0005e4f0  _SmackGetRect
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSDATA.C)
+0004:00004180  __sosDIGIData_Start
+0004:00004184  __wSOSDriverLinear
+0004:00004198  __wSOSTimerLinear
+0004:000041ac  __lpSOSDriver
+0004:000041ca  __lpSOSDriverCS
+0004:000041e8  __wSOSDriverSize
+0004:000041fc  __wSOSTimerSize
+0004:00004210  __lpSOSTimer
+0004:0000422e  __lpSOSTimerCS
+0004:0000424c  __wSOSDriverMemHandle
+0004:00004260  __wSOSTimerMemHandle
+0004:00004274  __wSOSDriverLoaded
+0004:00004288  __wSOSTimerLoaded
+0004:0000429c  __wSOSDriverInitialized
+0004:000042b0  __wSOSOutputRate
+0004:000042c4  __wSOSDMABuffersize
+0004:000042d8  __lpSOSDMABuffer
+0004:000042f6  __dwSOSDMABufferPhysical
+0004:0000430a  __wSOSRealSeg
+0004:0000431e  __wSOSDriverType
+0004:00004332  __lpSOSFillHandler
+0004:00004350  __lpSOSSampleList
+0004:00004710  __lpSOSDMAFillCount
+0004:0000472e* __wSOSTmrNextCount
+0004:00004732  __wSOSDriverID
+0004:0000474a  __sSOSDriverCaps
+0004:000049d2  __wSOSDMAPortList
+0004:000049f2  __bSOSDMAChannel
+0004:000049f7  __sSOSDIGIInitDriver
+0004:00004b73* __wTIMERUsed
+0004:00004b77  __wTIMERValue
+0004:00004b7b  __lpTIMEREvents
+0004:00004bdb  __wTIMEREventRate
+0004:00004c1b  __dwTIMEREventFraction
+0004:00004c5b  __dwTIMEREventFractionCurrent
+0004:00004c9b  __bSOSMIDITimerSongHandler
+0004:00004cab  __bSOSMIDISongHandle
+0004:00004cac  __pSOSDriverPath
+0004:00004dab  __pSOSTempDriverPath
+0004:00004eaa  __wSOSTimerEntered
+0004:00004eae  __sDETFileHeader
+0004:00004eda  __sDETDriverHeader
+0004:00004f0a  __wDETInitialized
+0004:00004f0e  __lpDETDriverBuffer
+0004:00004f14  __lpDETDriverBufferCS
+0004:00004f1a  __hDETFile
+0004:00004f1e  __dwDETDriverIndex
+0004:00004f22  __wDETDriverIndexCur
+0004:00004f26  __wDETMemHandle
+0004:00004f2a  __wDETLinear
+0004:00004f2e  __lpDETDeviceCaps
+0004:00004f34  __sDETCaps
+0004:00004fa0  __pSOSErrorStrings
+0004:00004ff0  __wSOSBufferAllocated
+0004:00005004  __wSOSSystemInitialized
+0004:00005008  __sSOSVDSInfo
+0004:00005018  __sSOSFillInfo
+0004:00005038  _sLOADFileHeader
+0004:00005064  _sLOADDriverHeader
+0004:00005094  __wSOSTimerEventIndex
+0004:00005098  __sosDIGIData_End
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSCAPS.C)
+0001:0004fdb0  sosDIGICaps_Start_
+0001:0004fdc5  sosDIGIGetDeviceCaps_
+0001:0004fe56  sosDIGICaps_End_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(outpw)
+0001:0004fe6b  outpw_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(min)
+0001:0004fe76  min_
+Module: serial1.lib(C:\VIO\SRC\SERIAL1\serial.c)
+0001:0004fe80+ lockMemory_
+0001:0004fefc+ unlockMemory_
+0001:0004ff78+ START_LOCK_CODE_
+0001:0004ff90+ input_
+0001:0004ffb8* output_
+0001:0004ffe0+ txHandler_
+0001:0005014c+ comIntHandler_
+0001:0005036c+ com_int_handler0_
+0001:00050394+ com_int_handler1_
+0001:000503bc+ com_int_handler2_
+0001:000503e4+ com_int_handler3_
+0001:0005040c+ END_LOCK_CODE_
+0001:00050424  setBPS_
+0001:00050558+ destroySerQueue_
+0001:000505c4+ createSerQueue_
+0001:00050684+ createBimodalHandler_
+0001:00050768  initSerial_
+0001:00050e88  deInitSerial_
+0001:000510e8  writeSer_
+0001:00051194* writeSerNoBuff_
+0001:00051218  readSer_
+0001:000512b8  rxBuffEmpty_
+0001:0005130c* txBuffEmpty_
+0001:0005138c  flushRead_
+0001:000513f8* flushWrite_
+0001:000514b8* flushSer_
+0001:000515a8* setCheckCTS_
+0001:000515f8+ setDTR_
+0001:00051690+ setRTS_
+0001:00051728* getDSR_
+0001:00051790* getDCD_
+0001:000517f8* uartType_
+0001:00051840* serOpen_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(getenv)
+0001:0005187c  getenv_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strtol)
+0001:00051a40* strtoul_
+0001:00051a4a  strtol_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(stk386)
+0001:00051acb* __STK
+0001:00051ab8  __CHK
+0001:00051ac8* __GRO
+0001:00051ae9  __STKOVERFLOW_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(iob)
+0004:00005170  ___iob
+0004:00005378* ___tmpfnext
+0004:00005379  __fmode
+0004:00233af0  ___ClosedStreams
+Module: C:\WATCOM\lib386\dos\clib3r.lib(putch)
+0001:00051af8  putch_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(delay386)
+0001:00051b08  delay_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fprtf)
+0001:00051b1e  __fprtf_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(stinit)
+0004:00233af4  ___OpenStreams
+Module: C:\WATCOM\lib386\dos\clib3r.lib(allocfp)
+0001:00051b9e  __allocfp_
+0001:00051c44  __freefp_
+0001:00051c7d  __purgefp_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(gtpid)
+0001:00051c9b  getpid_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(flush)
+0001:00051ca1  __flush_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(ftell)
+0001:00051d7a  ftell_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(_clse)
+0001:00051daa  __close_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(prtf)
+0001:00051ddf  __prtf_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(tolower)
+0001:000528f8  tolower_
+0001:000528f8* _tolower_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(seterrno)
+0001:00052906* __set_EDOM_
+0001:0005290b  __set_errno_
+0001:00052917* __set_ERANGE_
+0001:0005291e* __set_EINVAL_
+0001:0005292e  __set_doserrno_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fseek)
+0001:0005297c  fseek_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(chktty)
+0001:00052a78  __chktty_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(crwd386)
+0004:00005394  __psp
+0004:000053bf  __osmajor
+0004:000053c0  __osminor
+0004:000053b6  __Extender
+0004:000053b7  __ExtenderSubtype
+0004:000053b8  __X32VM
+0004:00005398* __x386_stacklow
+0004:0000538c  __LpCmdLine
+0004:00005390  __LpPgmName
+0004:00005384  __dynend
+0004:00005388  __curbrk
+0004:00005398  __STACKLOW
+0004:0000539c  __STACKTOP
+0004:000053a0  __ASTACKSIZ
+0004:000053a4  __ASTACKPTR
+0004:000053a8  __cbyte
+0004:000053ac* __cbyte2
+0004:000053b0  __child
+0004:000053b9  __Envptr
+0004:000053bd  __Envseg
+0004:000053b4  __no87
+0004:000053c1  __FPE_handler
+0004:000053c1  ___FPE_handler
+Module: C:\WATCOM\lib386\dos\clib3r.lib(cmain386)
+0001:00052aaa  __CMain
+Module: C:\WATCOM\lib386\dos\clib3r.lib(inirt386)
+0001:00052afa  __InitRtns
+0001:00052b45  __FiniRtns
+Module: C:\WATCOM\lib386\dos\clib3r.lib(seg386)
+0000:00001234  __DOSseg__
+Module: C:\WATCOM\lib386\dos\clib3r.lib(initargv)
+0001:00052b94  __Init_Argv_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(dosret)
+0001:00052d48  _dosret0_
+0001:00052d4f* _dosretax_
+0001:00052d53  __set_errno_dos_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(ioalloc)
+0001:00052dc4  __ioalloc_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(gtche)
+0001:00052e3b  getche_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(qread)
+0001:00052e58  __qread_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(scnf)
+0001:00052e86  __scnf_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(isatt)
+0001:00053aa8  isatty_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(umaskval)
+0004:000053dc  ___umaskval
+Module: C:\WATCOM\lib386\dos\clib3r.lib(iomode)
+0001:00053acf  __IOMode_
+0001:00053b24  __SetIOMode_
+0004:000053e0+ ___NFiles
+0004:000053e4+ ___init_mode
+0004:00005434+ __iomode
+Module: C:\WATCOM\lib386\dos\clib3r.lib(stack386)
+0001:00053b39  stackavail_
+Module: sosdw1cr.lib(sostimer.asm)
+0004:0000646c  __bTIMERInstalled
+0001:00053c07  _sosTIMERDRVInit
+0001:00053bac* _sosTIMERDRVFHandler
+0001:00053b45* _sosTIMERDRVHandler
+0004:00005438  __sosDIGIData1_Start
+0001:00053d21  _sosTIMERDRVUnInit
+0001:00053df6  _sosDIGITimer_End
+0001:00053d9d  _sosTIMERDRVCallOld
+0001:00053cc9  _sosTIMERDRVDisable
+0001:00053b44  _sosDIGITimer_Start
+0001:00053bc1  _sosTIMERDRVSetRate
+0001:00053cf5  _sosTIMERDRVEnable
+0004:00006470  __bTIMERDPMI
+0004:00006474  __sosDIGIData1_End
+Module: C:\WATCOM\lib386\dos\clib3r.lib(memalloc)
+0001:00053df8  __MemAllocator
+0001:00053ea0  __MemFree
+Module: C:\WATCOM\lib386\dos\clib3r.lib(grownear)
+0001:00053fea+ __FreeDPMIBlocks_
+0001:00054046* __ReAllocDPMIBlock_
+0001:000541b9+ __LastFree_
+0001:0005438a  __ExpandDGROUP_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(nmemneed)
+0001:00054553  __nmemneed_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(heapmod)
+0004:00233af8  ___nheap_clean
+0004:00233af9* ___fheap_clean
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMDATA.C)
+0004:00006478  _sosMIDIData_Start
+0004:0000647c  __lpSOSMIDIDriver
+0004:0000649a  __wSOSMIDIDriverLinear
+0004:000064ae  __wSOSMIDIDriverSize
+0004:000064c2  __lpSOSMIDIDriverCS
+0004:000064e0  __wSOSMIDIDriverLoaded
+0004:000064f4  __wSOSMIDIDriverType
+0004:00006508  __wSOSMIDIMemHandle
+0004:0000651c  __wSOSMIDIDriverID
+0004:00006534  __lpSOSMIDIDriverCaps
+0004:00006558  __lpSOSMIDITrack
+0004:00006b58  __dwSOSMIDITrackDeltaCurrent
+0004:00006f58  __dwSOSMIDITrackDeltaTime
+0004:00007358  __sSOSMIDITrackMap
+0004:00007388  __wSOSMIDIActiveTracks
+0004:000073a8  __wSOSMIDITotalTracks
+0004:000073c8  __lpSOSMIDIDrvFunction
+0004:00007530  __wSOSMIDISongPaused
+0004:00007550  __wSOSMIDISongMuted
+0004:00007570  __wSOSMIDISongActive
+0004:00007590  __bSOSMIDIEventSize
+0004:000075a0  __bSOSMIDIEventSizeControl
+0004:000075b0  __sSOSMIDISongHeader
+0004:000075e0  __wSOSMIDIEventHandle
+0004:00007600  __szSOSMIDIDrvFile
+0004:0000760c  __sSOSMIDIDRVFileHeader
+0004:00007638  __sSOSMIDIDRVDriverHeader
+0004:00007668  __wSOSMIDISysInititalized
+0004:0000766c  __lpSOSMIDICBCKDrvFunctions
+0004:0000768a  __lpSOSMIDICBCKFunctions
+0004:00007690  __sMIDIDIGIChannel
+0004:000076cc  __sMIDIDIGIQueue
+0004:000080cc  __wMIDIDIGISampleQueueHead
+0004:000080e0  __wMIDIDIGISampleQueueTail
+0004:000080f4  __wMIDIDIGIMaxSamples
+0004:00008108  __wMIDIDIGIUsedSamples
+0004:0000811c  __lpMIDIDIGIDrvFunctions
+0004:0000813a  __sMIDIDIGIStartSample
+0004:0000903a  __sMIDIDIGIInsFileHeader
+0004:00009058  __wMIDIDIGIDriverHandle
+0004:0000906c  __wMIDIDIGIDriverInitialized
+0004:00009080  __wMIDIDIGITimerEventHandle
+0004:00009094  __wMIDIDIGIDriverInitMIDI
+0004:000090a8  __wMIDIDIGIVelocitySensing
+0004:000090bc  __szMIDIDIGIInsFileID
+0004:000090c5  __lpSOSMIDITrackHeaders
+0004:000096c5  __bSOSMIDIChannelRemap
+0004:00009945  __bSOSMIDIChannelPriority
+0004:00009995  __bSOSMIDIOwnerChannel
+0004:000099e5  __bSOSMIDIOwnerSong
+0004:00009a35  __sSOSMIDIChannelData
+0004:0000a075  __bSOSMIDIChannelDataIndex
+0004:0000a2f5  __bSOSMIDIData
+0004:0000a2ff  __bSOSMIDIData1
+0004:0000a309  __wSOSMIDIChannelStealing
+0004:0000a30d  __bSOSMIDIDeviceChannelActive
+0004:0000a3bd  __bSOSMIDIDeviceChannelAvailable
+0004:0000a40d  __bSOSMIDIMasterVolume
+0004:0000a40e  __wSOSMIDISongVolume
+0004:0000a42e  __bSOSMIDIDeviceChannelVolume
+0004:0000a47e  __bSOSMIDIMT32SendData
+0004:0000a47f  __szMIDIMIDIFileID
+0004:0000a48e  __pSOSMIDIDriverPath
+0004:0000a58d  __pSOSMIDITempDriverPath
+0004:0000a68c  _lpFake
+0004:0000a692  _wFake
+0004:0000a696* __lpSOSMIDIAWEDrvFunctions
+0004:0000a6b4  __wSOSGravisTimerHandle
+0004:0000a6b8  __lpMIDIBranchData
+0004:0000acb8  __lpSOSMIDIBranchCallback
+0004:0000ace8  __lpSOSMIDILoopCallback
+0004:0000ad18  __lpSOSMIDITriggerCallback
+0004:0000c4e8  __bSOSMIDIBranchOccurred
+0004:0000c4e9  __wSOSMIDIVolumeFadeDirection
+0004:0000c509  __dwSOSMIDIVolumeFadeFraction
+0004:0000c529  __dwSOSMIDIVolumeFadeVolume
+0004:0000c549  __wSOSMIDIVolumeFadeTicks
+0004:0000c569  __bSOSMIDIHandleVolumeFade
+0004:0000c571  __wSOSDIGIMIDIHandle
+0004:0000c585  __lpMIDIWAVEDrvFunctions
+0004:0000c5a3  __wSOSMIDIChannelMuted
+0004:0000c6e3  _sosMIDIData_End
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSERR.C)
+0001:00054556  sosDIGIErr_Start_
+0001:0005456b* sosGetErrorString_
+0001:00054595  sosDIGIErr_End_
+Module: sosdw1cr.lib(sosdrv.asm)
+0001:00054cc4  _sosDRVVDSGetBuffer
+0001:00054964  _sosDRVUnInit
+0004:0000c7e4  _wDetectParam
+0001:00054e27* _getDS
+0001:00054b58  _sosDetDRVGetEnvString
+0001:00054a5e  _sosDRVSetAction
+0001:000545ad  _sosDRVLockMemory
+0001:00054ae4  _sosDIGIUnInitForWindows
+0004:0000c7e0  _wDetectIRQ
+0001:00054a38  _sosDRVSetRate
+0001:00054b19  _sosDetDRVEnvStringInit
+0001:000548e6  _sosDetDRVGetCapsInfo
+0004:0000c6e8  __sosDIGIData2_Start
+0001:0005480e  _sosDRVGetCapsPtr
+0001:00054d7d  _sosDRVMakeDMASelector
+0001:00054dfd  _sosDRVFreeDMASelector
+0001:00054778  _sosRealAlloc
+0001:00054c38  _sosDRVIsWindowsActive
+0001:000547d9* _sosDRVGetCapsInfo
+0001:000548a2  _sosDetDRVGetSettings
+0001:00054ba2  _sosDetDRVSetEnvString
+0004:0000c7dc  _wDetectDMA
+0001:000545ea  _sosDRVUnLockMemory
+0001:00054c96  _sosDRVFreeVDSStruct
+0001:00054d30  _sosDRVVDSFreeBuffer
+0001:0005485c  _sosDRVStop
+0001:00054e2f  _sosDIGIDrv_End
+0001:00054987  _sosDRVGetFillInfo
+0001:00054627  _sosAllocateFarMem
+0001:00054a85* _sosDIGIHandleVDS
+0001:00054a0f  _sosDRVStart
+0001:000547ae  _sosRealFree
+0001:00054c0d* _sosDRVGetFreeMemory
+0001:00054c55  _sosDRVAllocVDSStruct
+0001:00054bd8  _sosDRVSetupCallFunctions
+0004:0000c7d8  _wDetectPort
+0001:00054748  _sosFillSampleStructs
+0001:000546b5  _sosFreeSelector
+0001:00054934  _sosDetDRVVerifySettings
+0001:000549da  _sosDRVInit
+0001:000545ac  _sosDIGIDrv_Start
+0001:00054aaf  _sosDIGIInitForWindows
+0001:000546eb  _sosCreateAliasCS
+0001:0005487f  _sosDetDRVExist
+0004:0000c7e8  __sosDIGIData2_End
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSLOAD.C)
+0001:00054e30  sosDIGILoad_Start_
+0001:00054e45  sosDIGILoadDriver_
+0001:00055068  sosDIGIUnLoadDriver_
+0001:00055140  sosDIGILoadTimer_
+0001:0005531a  sosDIGIUnLoadTimer_
+0001:000553b5* sosDIGISetActiveTimer_
+0001:000553dc  sosDIGILoad_End_
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSPLYNG.C)
+0001:000553f1  sosDIGIPlyng_Start_
+0001:00055406* sosDIGISamplesPlaying_
+0001:00055465  sosDIGIPlyng_End_
+Module: sosdw1cr.lib(C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSRATE.C)
+0001:0005547a  sosDIGIRate_Start_
+0001:0005548f* sosDIGISetOutputRate_
+0001:000554f1  sosDIGIRate_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMCAPS.C)
+0001:00055506  sosMIDICaps_Start_
+0001:0005551b  sosMIDIGetDeviceCaps_
+0001:000555c0  sosMIDICaps_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMCBCK.C)
+0001:000555d5  sosMIDICbck_Start_
+0001:000555ea  callbackGetCallTable_
+0001:0005560d  _callbackSendData
+0001:0005563d  _callbackInit
+0001:00055656  _callbackUnInit
+0001:0005566f  _callbackReset
+0001:00055688  _callbackSetInstrumentData
+0001:000556b2  sosMIDICbck_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMDIGI.C)
+0001:000556c7  sosMIDIDigi_Start_
+0001:000556dc  digiGetCallTable_
+0001:000556ff  _digiSendData
+0001:00055ac3  _digiInit
+0001:00055c78  _digiUnInit
+0001:00055cf3  _digiReset
+0001:00055d20  _digiSetInstrumentData
+0001:00055ea3+ _digiSampleCallback
+0001:00055ecc  sosMIDIDigi_End_
+0004:00233afc* _String
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMDQ.C)
+0001:00055ee1  sosMIDIDq_Start_
+0001:00055ef6  digiQueueInit_
+0001:00055fc4  digiQueueUnInit_
+0001:00055fdc  digiQueueAddItem_
+0001:00056094  digiQueueGetItem_
+0001:00056208  digiQueueDeleteItemMIDI_
+0001:0005638a  digiQueueDeleteItem_
+0001:000564e7  digiQueueFindItemMIDI_
+0001:0005658f  digiQueueGetItemWAVE_
+0001:000566f1  digiQueueDeleteItemWAVE_
+0001:00056807  sosMIDIDq_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMLOAD.C)
+0001:0005681c  sosMIDILoad_Start_
+0001:00056831  sosMIDILoadDriver_
+0001:00056a4d  sosMIDIUnLoadDriver_
+0001:00056b18  sosMIDILoad_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMPTR.C)
+0001:00056b2d  sosMIDIPtr_Start_
+0001:00056b42  sosMIDINormalizePtr_
+0001:00056b6f  sosMIDIPtr_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMTMPO.C)
+0001:00056b84  sosMIDITmpo_Start_
+0001:00056b99* sosMIDISongAlterTempo_
+0001:00056c2a* sosMIDIGetTimeToPlay_
+0001:00056c57  sosMIDITmpo_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMTMR.C)
+0001:00056c6c  sosMIDITmr_Start_
+0001:00056c81  sosMIDISongHandler_
+0001:00058203  sosMIDISetTrackState_
+0001:000583e4  sosMIDITmr_End_
+Module: sosmw1cr.lib(C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMWAVE.C)
+0001:000583f9  _waveSendData
+0001:00058876  waveGetCallTable_
+0001:00058899  _waveInit
+0001:00058a58  _waveUnInit
+0001:00058ad3  _waveReset
+0001:00058b00  _waveSetInstrumentData
+0001:00058c90+ _waveSampleCallback
+0001:00058cc0+ _sosWAVEPStopSample
+0001:00058d2a+ _waveChannelResetControllers
+0001:00058dab+ _waveChannelSetVolume
+0001:00058e46+ _waveChannelSetPan
+0001:00058ed3+ _waveChannelSetBend
+0001:00058fdf+ _waveChannelNotesOff
+0001:00059023* StringOut_
+0001:000590a4+ _waveCalculatePitchBend
+0001:0005920c+ _waveGetBestSample
+0004:0000c7ec+ __wSOSWAVEInsDataSet
+0004:0000c7f0+ _dwWAVEPitchTable
+0004:0000cac0+ _waveVoice
+0004:0000cd40+ _waveChannel
+0004:0000cda0+ _waveDIGIMIDIHandle
+0004:00233b08+ _lpWAVEStartSample
+0004:00233b0e+ _lpWAVEHeader
+Module: sosmw1cr.lib(sosmdrv.asm)
+0001:00059375  _sosMIDIDRVGetFuncsPtr
+0001:00059340  _sosMIDIDRVGetCapsInfo
+0001:000593dc* _xint3
+0001:000593bb  _sosMIDIDRVSpecialFunction
+0001:000593de  _xgetES
+Module: C:\WATCOM\lib386\dos\clib3r.lib(istable)
+0004:00002808  __IsTable
+Module: C:\WATCOM\lib386\dos\clib3r.lib(intxa386)
+0001:000593e4  __int386x_
+0001:00059441  _DoINTR_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(unlnk)
+0001:000597c2  unlink_
+Module: smack.lib(vesabank.ASM)
+0001:000597f0  SVGAVesaBank
+0001:00059814  SVGAVesaBankRead
+0001:00059838  SVGAVesaBank32
+0001:00059860  SVGAVesaBankRead32
+Module: smack.lib(C:\DEVEL\PROJECTS\SMACK\dosext.cpp)
+0001:00059890  _SimInt
+0001:000598c4* _mem386
+0001:00059914  _AllocDOS
+0001:00059958  _FreeDOS
+Module: smack.lib(rfile.ASM)
+0001:0005e6e0  _radopen
+0001:0005e719* _radcreate
+0001:0005e739  _radread
+0001:0005e785* _radwrite
+0001:0005e7d1  _radseekbegin
+0001:0005e7f5  _radseekcur
+0001:0005e7fb* _radseekend
+0001:0005e801  _radclose
+0001:0005e80f* _IsRemote
+0001:0005e82d* _radgetfiletime
+0001:0005e848* _radsetfiletime
+0001:0005e701* _raderase
+Module: C:\WATCOM\lib386\dos\clib3r.lib(io386)
+0001:000599f2  _dos_read_
+0001:00059a1c* _dos_write_
+Module: serial1.lib(serbih.asm)
+0002:00000000  sbhInt_
+0002:00000134  sbhEnd_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(environ)
+0004:0000cdd0  _environ
+0004:0000cdd4  ___env_mask
+Module: C:\WATCOM\lib386\dos\clib3r.lib(strnicmp)
+0001:00059a24  strnicmp_
+0001:00059a24* _strnicmp_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(xmsg)
+0001:00059a77* __exit_with_msg_
+0001:00059a7c  __fatal_runtime_error_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(delay)
+0001:00059a99  __delay_init_
+0001:00059acb  __delay_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fputc)
+0001:00059b01  fputc_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(initfile)
+0001:00059ba5  __InitFiles_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(ioexit)
+0001:00059c1c  __full_io_exit_
+0001:00059c28* fcloseall_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(qwrit)
+0001:00059c85  __qwrite_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(itoa)
+0001:00059d1e+ utoa_
+0001:00059d68  itoa_
+0001:00059d68* _itoa_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(noefgfmt)
+0004:0000cdd8  ___EFG_printf
+0004:0000cddc  ___EFG_scanf
+Module: C:\WATCOM\lib386\dos\clib3r.lib(ltoa)
+0001:00059dba  ultoa_
+0001:00059e04  ltoa_
+0001:00059e04* _ltoa_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(errno)
+0001:00059e1f  __get_errno_ptr_
+0001:00059e25  __get_doserrno_ptr_
+0004:00233ba4+ _errno
+0004:00233ba8+ __doserrno
+Module: C:\WATCOM\lib386\dos\clib3r.lib(cinit)
+0001:00059e2b  __CommonInit_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(___argc)
+0004:00233bac  ____Argc
+0004:00233bb0  ____Argv
+Module: C:\WATCOM\lib386\dos\clib3r.lib(fdfs386)
+0001:00059e36  __FDFS
+Module: C:\WATCOM\lib386\dos\clib3r.lib(minreal)
+0004:00233bb4  ___minreal
+Module: C:\WATCOM\lib386\dos\clib3r.lib(heapen)
+0001:00059e82* _heapenable_
+0004:0000cde0  ___heap_enabled
+Module: C:\WATCOM\lib386\dos\clib3r.lib(sbrk386)
+0001:00059e92* sbrk_
+0001:00059f5a  __brk_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(amblksiz)
+0004:0000cde4  __amblksiz
+Module: C:\WATCOM\lib386\dos\clib3r.lib(error386)
+0001:0005a026  __doserror_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(setenvp)
+0001:0005a039  __setenvp_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(enterdb)
+0001:0005a10d  __EnterWVIDEO_
+0004:0000cde8+ ___WD_Present
+
+
+                        +---------------------+
+                        |   Module Segments   |
+                        +---------------------+
+
+! = 32-bit segment
+c = initialized communal data
+
+Module          Segment               Class           Address         Size
+======          =======               =====           =======         ====
+
+C:\TEKSRC2\SRC\tekgame.c _TEXT        CODE           0001:00000010  ! 0000501b
+                CONST                 DATA           0004:00000004  ! 0000047e
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00002910  ! 0000026f
+                _BSS                  BSS            0004:0000ce10  ! 000532c7
+C:\TEKSRC2\SRC\tekprep.c _TEXT        CODE           0001:0000502b  ! 0000221b
+                CONST                 DATA           0004:00000484  ! 000000ff
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00002b80  ! 0000001a
+                _BSS                  BSS            0004:000600d8  ! 00033116
+C:\TEKSRC2\SRC\tektag.c _TEXT         CODE           0001:00007246  ! 00005bc2
+                CONST                 DATA           0004:00000584  ! 00000163
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00002b9c  ! 000000a8
+                _BSS                  BSS            0004:000931f0  ! 00023586
+C:\TEKSRC2\SRC\teksnd.c _TEXT         CODE           0001:0000ce08  ! 000025d6
+                CONST                 DATA           0004:000006e8  ! 000003e0
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00002c44  ! 000002ea
+                _BSS                  BSS            0004:000b6778  ! 0002643e
+                teksnd11_DATA         FAR_DATA       0003:00000000  ! 00000004
+C:\TEKSRC2\SRC\tekstat.c _TEXT        CODE           0001:0000f3de  ! 00008f89
+                CONST                 DATA           0004:00000ac8  ! 000005e6
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00002f30  ! 000000c9
+                _BSS                  BSS            0004:000dcbb8  ! 00012096
+C:\TEKSRC2\SRC\tekchng.c _TEXT        CODE           0001:00018367  ! 0000035b
+                CONST                 DATA           0004:000010b0  ! 00000014
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00002ffc  ! 00000000
+                _BSS                  BSS            0004:000eec50  ! 000000c0
+C:\TEKSRC2\SRC\tekspr.c _TEXT         CODE           0001:000186c2  ! 000017cb
+                CONST                 DATA           0004:000010c4  ! 000000f3
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00002ffc  ! 0000000c
+                _BSS                  BSS            0004:000eed10  ! 00000001
+C:\TEKSRC2\SRC\tekgun.c _TEXT         CODE           0001:00019e8d  ! 00002c1a
+                CONST                 DATA           0004:000011b8  ! 000000c7
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003008  ! 00000100
+                _BSS                  BSS            0004:000eed14  ! 000002f0
+C:\TEKSRC2\SRC\tekmsc.c _TEXT         CODE           0001:0001caa7  ! 00005fb8
+                CONST                 DATA           0004:00001280  ! 00000747
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003108  ! 0000068e
+                _BSS                  BSS            0004:000ef004  ! 000021a1
+C:\TEKSRC2\SRC\tektxt.c _TEXT         CODE           0001:00022a5f  ! 00000d6b
+                CONST                 DATA           0004:000019c8  ! 00000422
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003798  ! 0000000a
+                _BSS                  BSS            0004:000f11a8  ! 000000a7
+C:\TEKSRC2\SRC\tekmap.c _TEXT         CODE           0001:000237ca  ! 000012e0
+                CONST                 DATA           0004:00001dec  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000037a4  ! 00000000
+                _BSS                  BSS            0004:000f1250  ! 00000000
+C:\TEKSRC2\SRC\tekldsv.c _TEXT        CODE           0001:00024aaa  ! 00001664
+                CONST                 DATA           0004:00001dec  ! 00000025
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000037a4  ! 00000000
+                _BSS                  BSS            0004:000f1250  ! 00000000
+C:\TEKSRC2\SRC\teksmk.c _TEXT         CODE           0001:0002610e  ! 0000037d
+                CONST                 DATA           0004:00001e14  ! 0000008a
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000037a4  ! 00000000
+                _BSS                  BSS            0004:000f1250  ! 0000009c
+tekasm.asm      _TEXT                 CODE           0001:0002648c  ! 000000d3
+                _DATA                 DATA           0004:000037a4  ! 00000008
+jstick.asm      _TEXT                 CODE           0001:0002655f  ! 00000064
+                _DATA                 DATA           0004:000037ac  ! 00000003
+C:\TEKSRC2\SRC\tekcdr.c _TEXT         CODE           0001:000265c3  ! 00000a97
+                CONST                 DATA           0004:00001ea0  ! 00000054
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000037b0  ! 00000006
+                _BSS                  BSS            0004:000f12ec  ! 0000025f
+C:\DEVEL\PROJECTS\SMACK\sndhmi.cpp _TEXT CODE        0001:00027060  ! 00000bcc
+                CONST                 DATA           0004:00001ef4  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000037b8  ! 00000060
+                _BSS                  BSS            0004:000f1550  ! 00000008
+D:\engine.c     _TEXT                 CODE           0001:00027c2c  ! 00018460
+                CONST                 DATA           0004:00001ef4  ! 0000007d
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003818  ! 000000ea
+                _BSS                  BSS            0004:000f1558  ! 0012c356
+cache1d.c       _TEXT                 CODE           0001:0004008c  ! 0000072c
+                CONST                 DATA           0004:00001f74  ! 000000c2
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003904  ! 00000018
+                _BSS                  BSS            0004:0021d8b0  ! 0000c210
+a.asm           CODE                  CODE           0001:0005a133  ! 00000d21
+multi.c         _TEXT                 CODE           0001:000407b8  ! 00002157
+                CONST                 DATA           0004:00002038  ! 00000076
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:0000391c  ! 0000030a
+                _BSS                  BSS            0004:00229ac0  ! 00009602
+C:\TEKSRC2\SRC\tekctm.c _TEXT         CODE           0001:0004290f  ! 0000044b
+                CONST                 DATA           0004:000020b0  ! 0000002a
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003c28  ! 00000000
+                _BSS                  BSS            0004:002330c4  ! 00000066
+C:\TEKSRC2\SRC\tekvfx1.c _TEXT        CODE           0001:00042d5a  ! 00000610
+                CONST                 DATA           0004:000020dc  ! 000000a4
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003c28  ! 00000042
+                _BSS                  BSS            0004:0023312c  ! 000003be
+V:\DEV\NEWPROJ\SDK\SRC\REALDOS\AVLIB.C _TEXT CODE    0001:0004336a  ! 00000aba
+                CONST                 DATA           0004:00002180  ! 000003d0
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003c6c  ! 0000025a
+                _BSS                  BSS            0004:002334ec  ! 00000120
+fprintf         _TEXT                 CODE           0001:00043e24  ! 00000021
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ec8  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+fclose          _TEXT                 CODE           0001:00043e45  ! 00000143
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ec8  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+sprintf         _TEXT                 CODE           0001:00043f88  ! 00000043
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ec8  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+fopen           _TEXT                 CODE           0001:00043fcb  ! 00000282
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ec8  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+printf          _TEXT                 CODE           0001:0004424d  ! 00000022
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ec8  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+memcpy          _TEXT                 CODE           0001:0004426f  ! 00000025
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ec8  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+exit            _TEXT                 CODE           0001:00044294  ! 0000002f
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ec8  ! 0000000c
+                _BSS                  BSS            0004:0023360c  ! 00000000
+strcpy          _TEXT                 CODE           0001:000442c3  ! 0000001f
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ed4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+d_getvec        _TEXT                 CODE           0001:000442e2  ! 00000032
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ed4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+disable         _TEXT                 CODE           0001:00044314  ! 00000002
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ed4  ! 00000000
+d_setvec        _TEXT                 CODE           0001:00044316  ! 0000002d
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ed4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+enable          _TEXT                 CODE           0001:00044343  ! 00000002
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ed4  ! 00000000
+cstrt386        _TEXT                 CODE           0001:00044348  ! 000002d7
+                _DATA                 DATA           0004:00003ed4  ! 00000008
+                BEGTEXT               CODE           0001:00000000  ! 00000010
+                _NULL                 BEGDATA        0004:00000000  ! 00000004
+                _AFTERNULL            BEGDATA        0004:00000004  ! 00000000
+                CONST                 DATA           0004:00002550  ! 00000000
+                TIB                   DATA           0004:0000cde9  ! 00000000
+                TI                    DATA           0004:0000cde9  ! 00000000
+                TIE                   DATA           0004:0000cde9  ! 00000000
+                XIB                   DATA           0004:0000cdea  ! 00000000
+                XI                    DATA           0004:0000cdea  ! 00000000
+                XIE                   DATA           0004:0000ce08  ! 00000000
+                YIB                   DATA           0004:0000ce08  ! 00000000
+                YI                    DATA           0004:0000ce08  ! 00000000
+                YIE                   DATA           0004:0000ce0e  ! 00000000
+                DATA                  DATA           0004:0000ce0e  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+                STACK                 STACK          0004:00233bc0  ! 00001000
+argcv386        _TEXT                 CODE           0001:00044620  ! 00000000
+                _DATA                 DATA           0004:00003edc  ! 00000008
+                XIB                   DATA           0004:0000cdea  ! 00000000
+                XI                    DATA           0004:0000cdea  ! 00000006
+                XIE                   DATA           0004:0000ce08  ! 00000000
+                YIB                   DATA           0004:0000ce08  ! 00000000
+                YI                    DATA           0004:0000ce08  ! 00000000
+                YIE                   DATA           0004:0000ce0e  ! 00000000
+accss           _TEXT                 CODE           0001:00044620  ! 0000003b
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+chmod           _TEXT                 CODE           0001:0004465b  ! 0000003c
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+labs            _TEXT                 CODE           0001:00044697  ! 00000007
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+fgetc           _TEXT                 CODE           0001:0004469e  ! 00000164
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+fgets           _TEXT                 CODE           0001:00044802  ! 00000069
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+strstr          _TEXT                 CODE           0001:0004486b  ! 000000be
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+strlen          _TEXT                 CODE           0001:00044929  ! 00000019
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+sscanf          _TEXT                 CODE           0001:00044942  ! 00000075
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+set386          _TEXT                 CODE           0001:000449c0  ! 00000018
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+open            _TEXT                 CODE           0001:000449d8  ! 00000272
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+read            _TEXT                 CODE           0001:00044c4a  ! 000000fb
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+close           _TEXT                 CODE           0001:00044d45  ! 00000005
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+write           _TEXT                 CODE           0001:00044d4a  ! 000001d5
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+__stos          _TEXT                 CODE           0001:00044f20  ! 000000a3
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+abs             _TEXT                 CODE           0001:00044fc3  ! 00000007
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+strupr          _TEXT                 CODE           0001:00044fca  ! 00000025
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+cmp386          _TEXT                 CODE           0001:00044ff0  ! 000000a1
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+memmove         _TEXT                 CODE           0001:00045091  ! 0000004d
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+strncmp         _TEXT                 CODE           0001:000450de  ! 00000029
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSTMR.C _TEXT CODE      0001:00045107  ! 000007b7
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+outp            _TEXT                 CODE           0001:000458be  ! 0000000a
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+nmalloc         _TEXT                 CODE           0001:000458c8  ! 000000e3
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ee4  ! 0000000c
+                _BSS                  BSS            0004:0023360c  ! 00000000
+lseek           _TEXT                 CODE           0001:000459ab  ! 00000043
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000000
+nfree           _TEXT                 CODE           0001:000459ee  ! 00000082
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:0023360c  ! 00000004
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMINS.C _TEXT CODE    0001:00045a70  ! 00000163
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSINIT.C _TEXT CODE     0001:00045bd3  ! 000013bf
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSCNTL.C _TEXT CODE     0001:00046f92  ! 00000684
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMINIT.C _TEXT CODE   0001:00047616  ! 00000e26
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMSONG.C _TEXT CODE   0001:0004843c  ! 0000120c
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMST.C _TEXT CODE     0001:00049648  ! 00000f80
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSSTART.C _TEXT CODE    0001:0004a5c8  ! 00000a68
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+flushall        _TEXT                 CODE           0001:0004b030  ! 00000034
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+filelen         _TEXT                 CODE           0001:0004b064  ! 0000003d
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+tell            _TEXT                 CODE           0001:0004b0a1  ! 00000011
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMPAUS.C _TEXT CODE   0001:0004b0b2  ! 00000769
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMDONE.C _TEXT CODE   0001:0004b81b  ! 0000006a
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSDONE.C _TEXT CODE     0001:0004b885  ! 00000100
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+toupper         _TEXT                 CODE           0001:0004b985  ! 0000000e
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+atoi            _TEXT                 CODE           0001:0004b993  ! 0000006d
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+chint386        _TEXT                 CODE           0001:0004ba00  ! 00000019
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+inp             _TEXT                 CODE           0001:0004ba19  ! 00000008
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+vsprintf        _TEXT                 CODE           0001:0004ba21  ! 00000028
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+strncpy         _TEXT                 CODE           0001:0004ba49  ! 00000025
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+isalpha         _TEXT                 CODE           0001:0004ba6e  ! 0000000e
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+isdigit         _TEXT                 CODE           0001:0004ba7c  ! 0000000e
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+strchr          _TEXT                 CODE           0001:0004ba8a  ! 00000014
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+creat           _TEXT                 CODE           0001:0004ba9e  ! 0000000d
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+rand            _TEXT                 CODE           0001:0004baab  ! 0000003a
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef0  ! 00000004
+                _BSS                  BSS            0004:00233610  ! 00000000
+int386          _TEXT                 CODE           0001:0004bae5  ! 0000001d
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef4  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+vprintf         _TEXT                 CODE           0001:0004bb02  ! 00000011
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef4  ! 00000000
+                _BSS                  BSS            0004:00233610  ! 00000000
+intr            _TEXT                 CODE           0001:0004bb13  ! 00000005
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003ef4  ! 00000000
+hrder386        _TEXT                 CODE           0001:0004bb18  ! 000000dd
+                _DATA                 DATA           0004:00003ef4  ! 00000010
+                _BSS                  BSS            0004:00233610  ! 00000400
+intx386         _TEXT                 CODE           0001:0004bbf5  ! 00000019
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f04  ! 00000000
+                _BSS                  BSS            0004:00233a10  ! 00000000
+fmemcpy         _TEXT                 CODE           0001:0004bc0e  ! 00000028
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f04  ! 00000000
+                _BSS                  BSS            0004:00233a10  ! 00000000
+segread         _TEXT                 CODE           0001:0004bc36  ! 00000028
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f04  ! 00000000
+fstrcpy         _TEXT                 CODE           0001:0004bc5e  ! 0000002f
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f04  ! 00000000
+                _BSS                  BSS            0004:00233a10  ! 00000000
+remove          _TEXT                 CODE           0001:0004bc8d  ! 00000005
+                CONST                 DATA           0004:00002550  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f04  ! 00000000
+                _BSS                  BSS            0004:00233a10  ! 00000000
+C:\DEVEL\PROJECTS\SMACK\svga.cpp _TEXT CODE          0001:0004bca0  ! 000007de
+                CONST                 DATA           0004:00002550  ! 0000005a
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f04  ! 0000007c
+                _BSS                  BSS            0004:00233a10  ! 000000dd
+strcat          _TEXT                 CODE           0001:0004c47e  ! 00000033
+                CONST                 DATA           0004:000025ac  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f80  ! 00000000
+                _BSS                  BSS            0004:00233af0  ! 00000000
+C:\DEVEL\PROJECTS\SMACK\smackinp.cpp _TEXT CODE      0001:0004c4c0  ! 00002b64
+                CONST                 DATA           0004:000025ac  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f80  ! 00000010
+                _BSS                  BSS            0004:00233af0  ! 00000000
+palet.ASM       _TEXT                 CODE           0001:0004f030  ! 00000035
+fmemmove        _TEXT                 CODE           0001:0004f065  ! 00000062
+                CONST                 DATA           0004:000025ac  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f90  ! 00000000
+                _BSS                  BSS            0004:00233af0  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSDETEC.C _TEXT CODE    0001:0004f0c7  ! 00000ce9
+                CONST                 DATA           0004:000025ac  ! 0000000b
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00003f90  ! 00000000
+                _BSS                  BSS            0004:00233af0  ! 00000000
+unsmack.ASM     _DATA                 DATA           0004:00003f90  ! 000001f0
+                _UNSTEXT              CODE           0001:0005ae60  ! 00003880
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSDATA.C _TEXT CODE     0001:0004fdb0  ! 00000000
+                CONST                 DATA           0004:000025b8  ! 000001e6
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00004180  ! 00000f1c
+                _BSS                  BSS            0004:00233af0  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSCAPS.C _TEXT CODE     0001:0004fdb0  ! 000000bb
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:0000509c  ! 00000000
+                _BSS                  BSS            0004:00233af0  ! 00000000
+outpw           _TEXT                 CODE           0001:0004fe6b  ! 0000000b
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:0000509c  ! 00000000
+                _BSS                  BSS            0004:00233af0  ! 00000000
+min             _TEXT                 CODE           0001:0004fe76  ! 00000008
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:0000509c  ! 00000000
+                _BSS                  BSS            0004:00233af0  ! 00000000
+C:\VIO\SRC\SERIAL1\serial.c _TEXT     CODE           0001:0004fe80  ! 000019fc
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000050a0  ! 00000030
+                _BSS                  BSS            0004:00233af0  ! 00000000
+getenv          _TEXT                 CODE           0001:0005187c  ! 00000061
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000050d0  ! 00000000
+                _BSS                  BSS            0004:00233af0  ! 00000000
+strtol          _TEXT                 CODE           0001:000518dd  ! 000001d3
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000050d0  ! 0000008c
+                _BSS                  BSS            0004:00233af0  ! 00000000
+stk386          _TEXT                 CODE           0001:00051ab0  ! 00000048
+                _DATA                 DATA           0004:0000515c  ! 00000014
+                XIB                   DATA           0004:0000cdea  ! 00000000
+                XI                    DATA           0004:0000cdf0  ! 00000006
+                XIE                   DATA           0004:0000ce08  ! 00000000
+                YIB                   DATA           0004:0000ce08  ! 00000000
+                YI                    DATA           0004:0000ce08  ! 00000000
+                YIE                   DATA           0004:0000ce0e  ! 00000000
+iob             _TEXT                 CODE           0001:00051af8  ! 00000000
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005170  ! 00000211
+                _BSS                  BSS            0004:00233af0  ! 00000004
+putch           _TEXT                 CODE           0001:00051af8  ! 0000000f
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af4  ! 00000000
+delay386        _TEXT                 CODE           0001:00051b08  ! 00000005
+                _DATA                 DATA           0004:00005384  ! 00000000
+                XIB                   DATA           0004:0000cdea  ! 00000000
+                XI                    DATA           0004:0000cdf6  ! 00000006
+                XIE                   DATA           0004:0000ce08  ! 00000000
+                YIB                   DATA           0004:0000ce08  ! 00000000
+                YI                    DATA           0004:0000ce08  ! 00000000
+                YIE                   DATA           0004:0000ce0e  ! 00000000
+fprtf           _TEXT                 CODE           0001:00051b0d  ! 00000090
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af4  ! 00000000
+stinit          _TEXT                 CODE           0001:00051b9e  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af4  ! 00000004
+                XIB                   DATA           0004:0000cdea  ! 00000000
+                XI                    DATA           0004:0000cdfc  ! 00000006
+                XIE                   DATA           0004:0000ce08  ! 00000000
+                YIB                   DATA           0004:0000ce08  ! 00000000
+                YI                    DATA           0004:0000ce08  ! 00000006
+                YIE                   DATA           0004:0000ce0e  ! 00000000
+allocfp         _TEXT                 CODE           0001:00051b9e  ! 000000fd
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+gtpid           _TEXT                 CODE           0001:00051c9b  ! 00000006
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+flush           _TEXT                 CODE           0001:00051ca1  ! 000000d9
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+ftell           _TEXT                 CODE           0001:00051d7a  ! 00000030
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+_clse           _TEXT                 CODE           0001:00051daa  ! 00000035
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+prtf            _TEXT                 CODE           0001:00051ddf  ! 00000b19
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+tolower         _TEXT                 CODE           0001:000528f8  ! 0000000e
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+seterrno        _TEXT                 CODE           0001:00052906  ! 00000034
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+fseek           _TEXT                 CODE           0001:0005293a  ! 0000013e
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+chktty          _TEXT                 CODE           0001:00052a78  ! 00000031
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:00005384  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+crwd386         _TEXT                 CODE           0001:00052aa9  ! 00000001
+                _DATA                 DATA           0004:00005384  ! 00000041
+cmain386        _TEXT                 CODE           0001:00052aaa  ! 0000004f
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000053c8  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+inirt386        _TEXT                 CODE           0001:00052afa  ! 0000009a
+                _DATA                 DATA           0004:000053c8  ! 00000000
+                XIB                   DATA           0004:0000cdea  ! 00000000
+                XI                    DATA           0004:0000ce02  ! 00000000
+                XIE                   DATA           0004:0000ce08  ! 00000000
+                YIB                   DATA           0004:0000ce08  ! 00000000
+                YI                    DATA           0004:0000ce0e  ! 00000000
+                YIE                   DATA           0004:0000ce0e  ! 00000000
+seg386          _TEXT                 CODE           0001:00052b94  ! 00000000
+                _DATA                 DATA           0004:000053c8  ! 00000000
+initargv        _TEXT                 CODE           0001:00052b94  ! 000001b4
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000053c8  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+dosret          _TEXT                 CODE           0001:00052d48  ! 0000007c
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000053c8  ! 00000014
+                _BSS                  BSS            0004:00233af8  ! 00000000
+ioalloc         _TEXT                 CODE           0001:00052dc4  ! 00000077
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000053dc  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+gtche           _TEXT                 CODE           0001:00052e3b  ! 0000001d
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000053dc  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+qread           _TEXT                 CODE           0001:00052e58  ! 0000001f
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000000
+                _DATA                 DATA           0004:000053dc  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+scnf            _TEXT                 CODE           0001:00052e77  ! 00000c31
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002800  ! 00000008
+                _DATA                 DATA           0004:000053dc  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+isatt           _TEXT                 CODE           0001:00053aa8  ! 00000027
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:000053dc  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+umaskval        _TEXT                 CODE           0001:00053acf  ! 00000000
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:000053dc  ! 00000004
+iomode          _TEXT                 CODE           0001:00053acf  ! 0000006a
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:000053e0  ! 00000058
+                _BSS                  BSS            0004:00233af8  ! 00000000
+stack386        _TEXT                 CODE           0001:00053b39  ! 00000009
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:00005438  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+sostimer.asm    _TEXT                 CODE           0001:00053b44  ! 000002b3
+                _DATA                 DATA           0004:00005438  ! 00001040
+memalloc        _TEXT                 CODE           0001:00053df8  ! 000001b3
+                _DATA                 DATA           0004:00006478  ! 00000000
+grownear        _TEXT                 CODE           0001:00053fab  ! 000005a8
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:00006478  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+nmemneed        _TEXT                 CODE           0001:00054553  ! 00000003
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:00006478  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000000
+heapmod         _TEXT                 CODE           0001:00054556  ! 00000000
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:00006478  ! 00000000
+                _BSS                  BSS            0004:00233af8  ! 00000002
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMDATA.C _TEXT CODE   0001:00054556  ! 00000000
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:00006478  ! 0000626f
+                _BSS                  BSS            0004:00233afc  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSERR.C _TEXT CODE      0001:00054556  ! 00000054
+                CONST                 DATA           0004:000027a0  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c6e8  ! 00000000
+                _BSS                  BSS            0004:00233afc  ! 00000000
+sosdrv.asm      _TEXT                 CODE           0001:000545ac  ! 00000884
+                _DATA                 DATA           0004:0000c6e8  ! 00000104
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSLOAD.C _TEXT CODE     0001:00054e30  ! 000005c1
+                CONST                 DATA           0004:000027a0  ! 0000000b
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233afc  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSPLYNG.C _TEXT CODE    0001:000553f1  ! 00000089
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233afc  ! 00000000
+C:\DONS\SOSDIGIW\SOSLIB\SRC\SOSRATE.C _TEXT CODE     0001:0005547a  ! 0000008c
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233afc  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMCAPS.C _TEXT CODE   0001:00055506  ! 000000cf
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233afc  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMCBCK.C _TEXT CODE   0001:000555d5  ! 000000f2
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233afc  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMDIGI.C _TEXT CODE   0001:000556c7  ! 0000081a
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233afc  ! 0000000a
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMDQ.C _TEXT CODE     0001:00055ee1  ! 0000093b
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233b08  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMLOAD.C _TEXT CODE   0001:0005681c  ! 00000311
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233b08  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMPTR.C _TEXT CODE    0001:00056b2d  ! 00000057
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233b08  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMTMPO.C _TEXT CODE   0001:00056b84  ! 000000e8
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233b08  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMTMR.C _TEXT CODE    0001:00056c6c  ! 0000178d
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 00000000
+                _BSS                  BSS            0004:00233b08  ! 00000000
+C:\DONS\SOSMIDIW\SOSMLIB\SRC\SOSMWAVE.C _TEXT CODE   0001:000583f9  ! 00000f45
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000000
+                _DATA                 DATA           0004:0000c7ec  ! 000005d4
+                _BSS                  BSS            0004:00233b08  ! 0000000c
+sosmdrv.asm     _TEXT                 CODE           0001:00059340  ! 000000a4
+                _DATA                 DATA           0004:0000cdc0  ! 00000000
+istable         _TEXT                 CODE           0001:000593e4  ! 00000000
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:00002808  ! 00000101
+                _DATA                 DATA           0004:0000cdc0  ! 00000000
+                _BSS                  BSS            0004:00233b14  ! 00000000
+intxa386        _TEXT                 CODE           0001:000593e4  ! 000003de
+                _DATA                 DATA           0004:0000cdc0  ! 00000000
+unlnk           _TEXT                 CODE           0001:000597c2  ! 00000021
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdc0  ! 00000000
+                _BSS                  BSS            0004:00233b14  ! 00000000
+vesabank.ASM    _DATA                 DATA           0004:0000cdc0  ! 00000000
+                _TEXT                 CODE           0001:000597f0  ! 00000098
+C:\DEVEL\PROJECTS\SMACK\dosext.cpp _TEXT CODE        0001:00059890  ! 00000161
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdc0  ! 00000001
+                _BSS                  BSS            0004:00233b20  ! 00000080
+rfile.ASM       _DATA                 DATA           0004:0000cdd0  ! 00000000
+                _RFILETEXT            CODE           0001:0005e6e0  ! 00000190
+io386           _TEXT                 CODE           0001:000599f2  ! 00000031
+                _DATA                 DATA           0004:0000cdd0  ! 00000000
+serbih.asm      _TEXT16               CODE           0002:00000000    00000134
+environ         _TEXT                 CODE           0001:00059a24  ! 00000000
+                _DATA                 DATA           0004:0000cdd0  ! 00000008
+                XIB                   DATA           0004:0000cdea  ! 00000000
+                XI                    DATA           0004:0000ce02  ! 00000006
+                XIE                   DATA           0004:0000ce08  ! 00000000
+                YIB                   DATA           0004:0000ce08  ! 00000000
+                YI                    DATA           0004:0000ce0e  ! 00000000
+                YIE                   DATA           0004:0000ce0e  ! 00000000
+strnicmp        _TEXT                 CODE           0001:00059a24  ! 00000053
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdd8  ! 00000000
+                _BSS                  BSS            0004:00233ba0  ! 00000000
+xmsg            _TEXT                 CODE           0001:00059a77  ! 00000022
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdd8  ! 00000000
+delay           _TEXT                 CODE           0001:00059a99  ! 00000068
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdd8  ! 00000000
+                _BSS                  BSS            0004:00233ba0  ! 00000004
+fputc           _TEXT                 CODE           0001:00059b01  ! 000000a4
+                CONST                 DATA           0004:000027ac  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdd8  ! 00000000
+                _BSS                  BSS            0004:00233ba4  ! 00000000
+initfile        _TEXT                 CODE           0001:00059ba5  ! 00000077
+                CONST                 DATA           0004:000027ac  ! 00000030
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdd8  ! 00000000
+                _BSS                  BSS            0004:00233ba4  ! 00000000
+ioexit          _TEXT                 CODE           0001:00059c1c  ! 00000069
+                CONST                 DATA           0004:000027dc  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdd8  ! 00000000
+                _BSS                  BSS            0004:00233ba4  ! 00000000
+qwrit           _TEXT                 CODE           0001:00059c85  ! 00000074
+                CONST                 DATA           0004:000027dc  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdd8  ! 00000000
+                _BSS                  BSS            0004:00233ba4  ! 00000000
+itoa            _TEXT                 CODE           0001:00059cf9  ! 0000008a
+                CONST                 DATA           0004:000027dc  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdd8  ! 00000000
+                _BSS                  BSS            0004:00233ba4  ! 00000000
+noefgfmt        _TEXT                 CODE           0001:00059d83  ! 00000012
+                CONST                 DATA           0004:000027dc  ! 00000024
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cdd8  ! 00000008
+                _BSS                  BSS            0004:00233ba4  ! 00000000
+ltoa            _TEXT                 CODE           0001:00059d95  ! 0000008a
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde0  ! 00000000
+                _BSS                  BSS            0004:00233ba4  ! 00000000
+errno           _TEXT                 CODE           0001:00059e1f  ! 0000000c
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde0  ! 00000000
+                _BSS                  BSS            0004:00233ba4  ! 00000008
+cinit           _TEXT                 CODE           0001:00059e2b  ! 0000000b
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde0  ! 00000000
+                _BSS                  BSS            0004:00233bac  ! 00000000
+___argc         _TEXT                 CODE           0001:00059e36  ! 00000000
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde0  ! 00000000
+                _BSS                  BSS            0004:00233bac  ! 00000008
+fdfs386         _TEXT                 CODE           0001:00059e36  ! 0000004c
+                _DATA                 DATA           0004:0000cde0  ! 00000000
+minreal         _TEXT                 CODE           0001:00059e82  ! 00000000
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde0  ! 00000000
+                _BSS                  BSS            0004:00233bb4  ! 00000004
+heapen          _TEXT                 CODE           0001:00059e82  ! 00000010
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde0  ! 00000004
+                _BSS                  BSS            0004:00233bb8  ! 00000000
+sbrk386         _TEXT                 CODE           0001:00059e92  ! 00000193
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde4  ! 00000000
+                _BSS                  BSS            0004:00233bb8  ! 00000000
+amblksiz        _TEXT                 CODE           0001:0005a025  ! 00000000
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde4  ! 00000004
+                _BSS                  BSS            0004:00233bb8  ! 00000000
+error386        _TEXT                 CODE           0001:0005a026  ! 00000013
+                _DATA                 DATA           0004:0000cde8  ! 00000000
+setenvp         _TEXT                 CODE           0001:0005a039  ! 000000d4
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde8  ! 00000000
+                _BSS                  BSS            0004:00233bb8  ! 00000000
+enterdb         _TEXT                 CODE           0001:0005a10d  ! 00000026
+                CONST                 DATA           0004:00002800  ! 00000000
+                CONST2                DATA           0004:0000290c  ! 00000000
+                _DATA                 DATA           0004:0000cde8  ! 00000001
+                _BSS                  BSS            0004:00233bb8  ! 00000000
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+sosmw1cr.lib
+sosdw1cr.lib
+serial1.lib
+smack.lib
+C:\WATCOM\lib386\dos\clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  00293568 (2700648.)
+Entry point address: 0001:00044348
+Link time: 00:00.60

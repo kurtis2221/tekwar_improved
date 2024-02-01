@@ -202,6 +202,7 @@ extern    int       noguardflag;
 extern    int       nostalkflag;
 extern    int       nochaseflag;
 extern    int       nostrollflag;
+extern    int       projflag;
 
 int      isaplayersprite(int sprnum);
 void     clearXTpics(short spriteno);
@@ -2323,30 +2324,33 @@ enemyshootgun(short sprnum,long x,long y,long z,short daang,long dahoriz,
           return;
      case GUN3FLAG:               
      case GUN4FLAG:               
-     case GUN5FLAG:               
-          daang2=daang;
-          daz2=((100-dahoriz)<<11);
-          z=posz[target];     // instead of calculating a dot product angle
-          hitscan(x,y,z,dasectnum,sintable[(daang2+2560)&2047],
-               sintable[(daang2+2048)&2047],daz2,
-               &hitsect,&hitwall,&hitsprite,&hitx,&hity,&hitz);
-          if( hitsprite > 0 ) {
-               if( playerhit(hitsprite, &pnum) ) {
-                    playerpainsound(pnum);
-                    enemywoundplayer(pnum,sprnum,3);
+     case GUN5FLAG:
+          if(!projflag)
+          {               
+               daang2=daang;
+               daz2=((100-dahoriz)<<11);
+               z=posz[target];     // instead of calculating a dot product angle
+               hitscan(x,y,z,dasectnum,sintable[(daang2+2560)&2047],
+                    sintable[(daang2+2048)&2047],daz2,
+                    &hitsect,&hitwall,&hitsprite,&hitx,&hity,&hitz);
+               if( hitsprite > 0 ) {
+                    if( playerhit(hitsprite, &pnum) ) {
+                         playerpainsound(pnum);
+                         enemywoundplayer(pnum,sprnum,3);
+                    }
+                    else {
+                         damagesprite(hitsprite,tekgundamage(guntype,x,y,z,hitsprite));
+                    }
                }
-               else {
-                    damagesprite(hitsprite,tekgundamage(guntype,x,y,z,hitsprite));
+               else {                   
+                    j=jsinsertsprite(hitsect, 3);
+                    if( j != -1 ) {
+                         fillsprite(j,hitx,hity,hitz+(8<<8),2,-4,0,32,16,16,0,0,
+                                   EXPLOSION,daang,0,0,0,sprnum+MAXSPRITES,hitsect,3,63,0,0);
+                    }
                }
+               break;
           }
-          else {                   
-               j=jsinsertsprite(hitsect, 3);
-               if( j != -1 ) {
-                    fillsprite(j,hitx,hity,hitz+(8<<8),2,-4,0,32,16,16,0,0,
-                               EXPLOSION,daang,0,0,0,sprnum+MAXSPRITES,hitsect,3,63,0,0);
-               }
-          }
-          break;
      case GUN6FLAG:               
 	     j = jsinsertsprite(sprptr[sprnum]->sectnum, PROJECTILE);
           if ( j ==  -1 ) {

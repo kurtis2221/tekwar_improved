@@ -88,6 +88,8 @@ extern    char      paletteloaded;
 extern    int       digiloopflag;
 extern    int       ovmode;
 extern    char      syncstate;
+extern    int       manualendflag;
+extern    int       projflag;
 extern    int       goreflag;
 extern    long      vel,svel,angvel;
 extern    int       headbobon;
@@ -222,7 +224,9 @@ int       noguardflag;
 int       nostalkflag;
 int       nochaseflag;
 int       nostrollflag;
-int       nobriefflag;   
+int       nobriefflag;
+int       manualendflag;
+int       projflag;   
 char      messagebuf[MSGBUFSIZE];
 char      notininventory;
 char      redrawborders;
@@ -2430,6 +2434,8 @@ usage()
      printf("options:    practice\n");
      printf("            nogore\n");
      printf("            nobriefs\n");
+     printf("            manualend\n");
+     printf("            proj\n");
      printf("            netname [NAME]\n");   
      printf("            noenemies\n");
      printf("            cyber 1|2|3|4\n");
@@ -2486,6 +2492,14 @@ tekargv(short int argc,char **argv)
                     localname[10]=0;
                }
                argmatch++;
+          }
+          if (strcmp(strupr(argv[p]),"MANUALEND") == 0) {            
+               argmatch++;
+               manualendflag=1;
+          }
+          if (strcmp(strupr(argv[p]),"PROJ") == 0) {            
+               argmatch++;
+               projflag=1;
           }    
           if (strcmp(strupr(argv[p]),"NOGORE") == 0) {            
                argmatch++;
@@ -3531,42 +3545,82 @@ missionaccomplished(int  sn)
      case WINGDEATHPIC:
           symbols[0]=1;
           mission_accomplished=1;
-          gameover=1;
+          if(manualendflag)
+          {
+               showmessage("MARTY DOLLAR DEFEATED");
+			playsound(S_HOLOGRAMDIE,0,0,0,ST_IMMEDIATE);
+          }
+          else gameover=1;
           break;
      case DIDEATHPIC:
           symbols[1]=1;
           mission_accomplished=1;
-          gameover=1;
+          if(manualendflag)
+          {
+               showmessage("DALLAS DIMARCO DEFEATED");
+			playsound(S_HOLOGRAMDIE,0,0,0,ST_IMMEDIATE);
+          }
+          else gameover=1;
           break;
      case SFRODEATHPIC:
           symbols[2]=1;
           mission_accomplished=1;
-          gameover=1;
+          if(manualendflag)
+          {
+               showmessage("CARLYLE ROSSI DEFEATED");
+			playsound(S_HOLOGRAMDIE,0,0,0,ST_IMMEDIATE);
+          }
+          else gameover=1;
           break;
      case ANTDEATHPIC:
           symbols[3]=1;
           mission_accomplished=1;
-          gameover=1;
+          if(manualendflag)
+          {
+               showmessage("CONRAD LOWELL DEFEATED");
+			playsound(S_HOLOGRAMDIE,0,0,0,ST_IMMEDIATE);
+          }
+          else gameover=1;
           break;
      case SGOLDEATHPIC:
           symbols[4]=1;
           mission_accomplished=1;
-          gameover=1;
+          if(manualendflag)
+          {
+               showmessage("SONNY HOKURI DEFEATED");
+			playsound(S_HOLOGRAMDIE,0,0,0,ST_IMMEDIATE);
+          }
+          else gameover=1;
           break;
      case SUNGDEATHPIC:
           symbols[5]=1;
           mission_accomplished=1;
-          gameover=1;
+          if(manualendflag)
+          {
+               showmessage("MILES CONNOR DEFEATED");
+			playsound(S_HOLOGRAMDIE,0,0,0,ST_IMMEDIATE);
+          }
+          else gameover=1;
           break;
      case REDHDEATHPIC:
           symbols[6]=1;
           mission_accomplished=1;
-          gameover=1;
+          if(manualendflag)
+          {
+               showmessage("JANUS DEFEATED");
+			playsound(S_HOLOGRAMDIE,0,0,0,ST_IMMEDIATE);
+          }
+          else gameover=1;
           break;
      case SSALDEATHPIC:
           killedsonny=1;
           mission_accomplished=1;
-          gameover=1;
+          if(manualendflag)
+          {
+               showmessage("SONNY HOKURI DEFEATED");
+			playsound(S_HOLOGRAMDIE,0,0,0,ST_IMMEDIATE);
+          }
+          else gameover=1;
           break;
      }
 }
@@ -3605,7 +3659,11 @@ depositsymbol(int snum)
          symbolsdeposited[5] &&
          symbolsdeposited[6] ) {
          allsymsdeposited=1;
-         gameover=1;
+         if(manualendflag)
+         {
+            showmessage("ALL SYMBOLS DEPOSITED");
+		  playsound(S_HOLOGRAMDIE,0,0,0,ST_IMMEDIATE);
+         } else gameover=1;
      }
 }
 
